@@ -20,7 +20,7 @@ use Havex\Bundle\SuluNewsBundle\Api\News as ApiNews;
  */
 trait NewsTrait
 {
-    use \Havex\Bundle\SuluNewsBundle\Tests\Unit\Traits\Entity\NewsTrait;
+    use \Havex\Bundle\SuluNewsBundle\Tests\Unit\Traits\Entity\HavexNewsTrait;
 
     public function generateEmptyApiNews(): ApiNews
     {

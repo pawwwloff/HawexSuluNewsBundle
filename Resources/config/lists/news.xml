@@ -38,22 +38,22 @@
 
         <property name="id" visibility="no" translation="sulu_admin.id">
             <field-name>id</field-name>
-            <entity-name>Havex\Bundle\SuluNewsBundle\Entity\News</entity-name>
+            <entity-name>Havex\Bundle\SuluNewsBundle\Entity\HavexNews</entity-name>
         </property>
 
         <property name="title" visibility="always" searchability="yes" translation="sulu_admin.title">
             <field-name>title</field-name>
-            <entity-name>Havex\Bundle\SuluNewsBundle\Entity\News</entity-name>
+            <entity-name>Havex\Bundle\SuluNewsBundle\Entity\HavexNews</entity-name>
         </property>
 
         <property name="teaser" visibility="always" searchability="yes" translation="sulu.havex.news.teaser">
             <field-name>teaser</field-name>
-            <entity-name>Havex\Bundle\SuluNewsBundle\Entity\News</entity-name>
+            <entity-name>Havex\Bundle\SuluNewsBundle\Entity\HavexNews</entity-name>
         </property>
 
         <property name="publishedAt" type="datetime" visibility="yes" searchability="yes" translation="sulu.havex.news.publishedAt">
             <field-name>publishedAt</field-name>
-            <entity-name>Havex\Bundle\SuluNewsBundle\Entity\News</entity-name>
+            <entity-name>Havex\Bundle\SuluNewsBundle\Entity\HavexNews</entity-name>
 
             <filter type="datetime" />
         </property>
@@ -130,7 +130,7 @@
 
         <property name="enabled" visibility="no" translation="sulu.havex.news.enable_news" type="bool">
             <field-name>enabled</field-name>
-            <entity-name>Havex\Bundle\SuluNewsBundle\Entity\News</entity-name>
+            <entity-name>Havex\Bundle\SuluNewsBundle\Entity\HavexNews</entity-name>
         </property>
     </properties>
 </list>

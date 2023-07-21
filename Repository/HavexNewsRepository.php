@@ -15,18 +15,18 @@ namespace Havex\Bundle\SuluNewsBundle\Repository;
 
 use Doctrine\ORM\EntityRepository;
 use Sulu\Component\SmartContent\Orm\DataProviderRepositoryInterface;
-use Havex\Bundle\SuluNewsBundle\Entity\HavexHavexNews;
+use Havex\Bundle\SuluNewsBundle\Entity\HavexNews;
 
 /**
- * Class NewsRepository.
+ * Class HavexNewsRepository.
  */
-class NewsRepository extends EntityRepository implements DataProviderRepositoryInterface
+class HavexNewsRepository extends EntityRepository implements DataProviderRepositoryInterface
 {
     /**
      * @throws \Doctrine\ORM\ORMException
      * @throws \Doctrine\ORM\OptimisticLockException
      */
-    public function save(HavexHavexNews $news): void
+    public function save(HavexNews $news): void
     {
         $this->getEntityManager()->persist($news);
         $this->getEntityManager()->flush();
@@ -36,7 +36,7 @@ class NewsRepository extends EntityRepository implements DataProviderRepositoryI
     {
         $qb = $this->getEntityManager()->createQueryBuilder();
         $qb->select('n')
-            ->from('HavexNewsBundle:HavexHavexNews', 'n')
+            ->from('HavexNewsBundle:HavexNews', 'n')
             ->where('n.enabled = 1')
             ->andWhere('n.publishedAt <= :created')
             ->setParameter('created', \date('Y-m-d H:i:s'))
@@ -51,7 +51,7 @@ class NewsRepository extends EntityRepository implements DataProviderRepositoryI
         return $news;
     }
 
-    public function findById(int $id): ?HavexHavexNews
+    public function findById(int $id): ?HavexNews
     {
         $news = $this->find($id);
         if (!$news) {

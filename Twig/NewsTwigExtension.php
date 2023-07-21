@@ -13,8 +13,8 @@ declare(strict_types=1);
 
 namespace Havex\Bundle\SuluNewsBundle\Twig;
 
-use Havex\Bundle\SuluNewsBundle\Entity\HavexHavexNews;
-use Havex\Bundle\SuluNewsBundle\Repository\NewsRepository;
+use Havex\Bundle\SuluNewsBundle\Entity\HavexNews;
+use Havex\Bundle\SuluNewsBundle\Repository\HavexNewsRepository;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;
 
@@ -35,7 +35,7 @@ class NewsTwigExtension extends AbstractExtension
         ];
     }
 
-    public function resolveNewsFunction(int $id): ?HavexHavexNews
+    public function resolveNewsFunction(int $id): ?HavexNews
     {
         $news = $this->newsRepository->find($id);
 

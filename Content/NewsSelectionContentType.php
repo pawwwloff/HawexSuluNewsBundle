@@ -15,8 +15,8 @@ namespace Havex\Bundle\SuluNewsBundle\Content;
 
 use Sulu\Component\Content\Compat\PropertyInterface;
 use Sulu\Component\Content\SimpleContentType;
-use Havex\Bundle\SuluNewsBundle\Entity\HavexHavexNews;
-use Havex\Bundle\SuluNewsBundle\Repository\NewsRepository;
+use Havex\Bundle\SuluNewsBundle\Entity\HavexNews;
+use Havex\Bundle\SuluNewsBundle\Repository\HavexNewsRepository;
 
 class NewsSelectionContentType extends SimpleContentType
 {
@@ -26,7 +26,7 @@ class NewsSelectionContentType extends SimpleContentType
     }
 
     /**
-     * @return HavexHavexNews[]
+     * @return HavexNews[]
      */
     public function getContentData(PropertyInterface $property): array
     {

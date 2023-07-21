@@ -3,8 +3,8 @@
 namespace Havex\Bundle\SuluNewsBundle\Tests\Unit\Twig;
 
 use PHPUnit\Framework\TestCase;
-use Havex\Bundle\SuluNewsBundle\Repository\NewsRepository;
-use Havex\Bundle\SuluNewsBundle\Tests\Unit\Traits\Entity\NewsTrait;
+use Havex\Bundle\SuluNewsBundle\Repository\HavexNewsRepository;
+use Havex\Bundle\SuluNewsBundle\Tests\Unit\Traits\Entity\HavexNewsTrait;
 use Havex\Bundle\SuluNewsBundle\Twig\NewsTwigExtension;
 
 class NewsTwigExtensionTest extends TestCase

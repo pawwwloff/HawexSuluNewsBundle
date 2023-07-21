@@ -19,8 +19,8 @@ use Sulu\Bundle\ContactBundle\Entity\ContactRepositoryInterface;
 use Havex\Bundle\SuluNewsBundle\Entity\Factory\MediaFactoryInterface;
 use Havex\Bundle\SuluNewsBundle\Entity\Factory\NewsFactory;
 use Havex\Bundle\SuluNewsBundle\Entity\Factory\TagFactoryInterface;
-use Havex\Bundle\SuluNewsBundle\Entity\HavexHavexNews;
-use Havex\Bundle\SuluNewsBundle\Tests\Unit\Traits\Entity\NewsTrait;
+use Havex\Bundle\SuluNewsBundle\Entity\HavexNews;
+use Havex\Bundle\SuluNewsBundle\Tests\Unit\Traits\Entity\HavexNewsTrait;
 
 /**
  * @internal
@@ -54,7 +54,7 @@ final class NewsFactoryTest extends TestCase
 
     public function testNewNewsFactory(): void
     {
-        $news = $this->factory->generateNewsFromRequest(new HavexHavexNews(), $this->generateNewsContentArray());
+        $news = $this->factory->generateNewsFromRequest(new HavexNews(), $this->generateNewsContentArray());
         static::assertSame('Test Title', $news->getTitle());
         static::assertSame([
             [
@@ -73,7 +73,7 @@ final class NewsFactoryTest extends TestCase
 
     public function testNewNewsFactoryWithEmptyContent(): void
     {
-        $news = $this->factory->generateNewsFromRequest(new HavexHavexNews(), $this->generateNewsContentArrayWithoutContent());
+        $news = $this->factory->generateNewsFromRequest(new HavexNews(), $this->generateNewsContentArrayWithoutContent());
         static::assertSame('Test', $news->getTitle());
         static::assertSame([], $news->getContent());
         static::assertSame('Test', $news->getTeaser());

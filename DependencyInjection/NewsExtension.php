@@ -20,7 +20,7 @@ use Symfony\Component\DependencyInjection\Extension\PrependExtensionInterface;
 use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Havex\Bundle\SuluNewsBundle\Admin\NewsAdmin;
-use Havex\Bundle\SuluNewsBundle\Entity\HavexHavexNews;
+use Havex\Bundle\SuluNewsBundle\Entity\HavexNews;
 
 /**
  * This is the class that loads and manages your bundle configuration.
@@ -42,7 +42,7 @@ class NewsExtension extends Extension implements PrependExtensionInterface
                 [
                     'indexes' => [
                         'news' => [
-                            'name' => 'HavexHavexNews',
+                            'name' => 'HavexNews',
                             'icon' => 'su-pen',
                             'view' => [
                                 'name' => NewsAdmin::NEWS_EDIT_FORM_VIEW,
@@ -63,10 +63,10 @@ class NewsExtension extends Extension implements PrependExtensionInterface
                 'sulu_route',
                 [
                     'mappings' => [
-                        HavexHavexNews::class => [
+                        HavexNews::class => [
                             'generator' => 'schema',
                             'options' => ['route_schema' => '/news/{object.getId()}'],
-                            'resource_key' => HavexHavexNews::RESOURCE_KEY,
+                            'resource_key' => HavexNews::RESOURCE_KEY,
                         ],
                     ],
                 ]
@@ -99,7 +99,7 @@ class NewsExtension extends Extension implements PrependExtensionInterface
                         'selection' => [
                             'havex_news_selection' => [
                                 'default_type' => 'list_overlay',
-                                'resource_key' => HavexHavexNews::RESOURCE_KEY,
+                                'resource_key' => HavexNews::RESOURCE_KEY,
                                 'view' => [
                                     'name' => 'app.news_edit_form',
                                     'result_to_view' => [

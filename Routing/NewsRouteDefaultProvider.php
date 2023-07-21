@@ -14,8 +14,8 @@ declare(strict_types=1);
 namespace Havex\Bundle\SuluNewsBundle\Routing;
 
 use Sulu\Bundle\RouteBundle\Routing\Defaults\RouteDefaultsProviderInterface;
-use Havex\Bundle\SuluNewsBundle\Entity\HavexHavexNews;
-use Havex\Bundle\SuluNewsBundle\Repository\NewsRepository;
+use Havex\Bundle\SuluNewsBundle\Entity\HavexNews;
+use Havex\Bundle\SuluNewsBundle\Repository\HavexNewsRepository;
 
 class NewsRouteDefaultProvider implements RouteDefaultsProviderInterface
 {
@@ -33,9 +33,9 @@ class NewsRouteDefaultProvider implements RouteDefaultsProviderInterface
 
     public function isPublished($entityClass, $id, $locale)
     {
-        /** @var HavexHavexNews $news */
+        /** @var HavexNews $news */
         $news = $this->newsRepository->findById((int) $id);
-        if (!$this->supports($entityClass) || !$news instanceof HavexHavexNews) {
+        if (!$this->supports($entityClass) || !$news instanceof HavexNews) {
             return false;
         }
 
@@ -44,6 +44,6 @@ class NewsRouteDefaultProvider implements RouteDefaultsProviderInterface
 
     public function supports($entityClass)
     {
-        return HavexHavexNews::class === $entityClass;
+        return HavexNews::class === $entityClass;
     }
 }

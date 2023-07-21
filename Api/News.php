@@ -18,10 +18,10 @@ use JMS\Serializer\Annotation\Groups;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\VirtualProperty;
 use Sulu\Component\Rest\ApiWrapper;
-use Havex\Bundle\SuluNewsBundle\Entity\HavexHavexNews as NewsEntity;
+use Havex\Bundle\SuluNewsBundle\Entity\HavexNews as NewsEntity;
 
 /**
- * The HavexHavexNews class which will be exported to the API.
+ * The HavexNews class which will be exported to the API.
  *
  * @ExclusionPolicy("all")
  */

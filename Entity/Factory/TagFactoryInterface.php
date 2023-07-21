@@ -13,9 +13,9 @@ declare(strict_types=1);
 
 namespace Havex\Bundle\SuluNewsBundle\Entity\Factory;
 
-use Havex\Bundle\SuluNewsBundle\Entity\HavexHavexNews;
+use Havex\Bundle\SuluNewsBundle\Entity\HavexNews;
 
 interface TagFactoryInterface
 {
-    public function processTags(HavexHavexNews $news, $tags);
+    public function processTags(HavexNews $news, $tags);
 }

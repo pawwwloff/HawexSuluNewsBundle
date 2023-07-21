@@ -15,13 +15,13 @@ namespace Havex\Bundle\SuluNewsBundle\Event;
 
 use Sulu\Bundle\ActivityBundle\Domain\Event\DomainEvent;
 use Havex\Bundle\SuluNewsBundle\Admin\NewsAdmin;
-use Havex\Bundle\SuluNewsBundle\Entity\HavexHavexNews;
+use Havex\Bundle\SuluNewsBundle\Entity\HavexNews;
 
 class NewsModifiedActivityEvent extends DomainEvent
 {
     public function __construct(
-        private readonly HavexHavexNews $news,
-        private readonly array          $payload
+        private readonly HavexNews $news,
+        private readonly array     $payload
     ) {
         parent::__construct();
     }
@@ -33,7 +33,7 @@ class NewsModifiedActivityEvent extends DomainEvent
 
     public function getResourceKey(): string
     {
-        return HavexHavexNews::RESOURCE_KEY;
+        return HavexNews::RESOURCE_KEY;
     }
 
     public function getResourceId(): string
