@@ -32,7 +32,7 @@ The news selection is used to display a specific list of news items.
 The smart content can be configured in every `template.xml` file.
 
  ```xml
-        <property name="news" type="news_selection">
+        <property name="news" type="havex_news_selection">
             <meta>
                 <title lang="en">News</title>
             </meta>
