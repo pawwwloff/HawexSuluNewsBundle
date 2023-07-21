@@ -28,7 +28,7 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use Havex\Bundle\SuluNewsBundle\Admin\DoctrineListRepresentationFactory;
 use Havex\Bundle\SuluNewsBundle\Api\News as NewsApi;
-use Havex\Bundle\SuluNewsBundle\Entity\HavexNews;
+use Havex\Bundle\SuluNewsBundle\Entity\HavexHavexNews;
 use Havex\Bundle\SuluNewsBundle\Repository\NewsRepository;
 use Havex\Bundle\SuluNewsBundle\Service\News\NewsService;
 
@@ -57,7 +57,7 @@ class NewsController extends AbstractRestController implements ClassResourceInte
     {
         $locale = $request->query->get('locale');
         $listRepresentation = $this->doctrineListRepresentationFactory->createDoctrineListRepresentation(
-            HavexNews::RESOURCE_KEY,
+            HavexHavexNews::RESOURCE_KEY,
             [],
             ['locale' => $locale]
         );
@@ -99,7 +99,7 @@ class NewsController extends AbstractRestController implements ClassResourceInte
     public function postTriggerAction(int $id, Request $request): Response
     {
         $news = $this->repository->findById($id);
-        if (!$news instanceof HavexNews) {
+        if (!$news instanceof HavexHavexNews) {
             throw new NotFoundHttpException();
         }
 
@@ -118,7 +118,7 @@ class NewsController extends AbstractRestController implements ClassResourceInte
     public function putAction(int $id, Request $request): Response
     {
         $entity = $this->repository->findById($id);
-        if (!$entity instanceof HavexNews) {
+        if (!$entity instanceof HavexHavexNews) {
             throw new NotFoundHttpException();
         }
 
@@ -149,7 +149,7 @@ class NewsController extends AbstractRestController implements ClassResourceInte
         return 0;
     }
 
-    protected function generateApiNewsEntity(HavexNews $entity, string $locale): NewsApi
+    protected function generateApiNewsEntity(HavexHavexNews $entity, string $locale): NewsApi
     {
         return new NewsApi($entity, $locale);
     }

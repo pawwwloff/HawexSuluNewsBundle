@@ -25,7 +25,7 @@ use Sulu\Bundle\AdminBundle\Admin\View\ViewCollection;
 use Sulu\Component\Security\Authorization\PermissionTypes;
 use Sulu\Component\Security\Authorization\SecurityCheckerInterface;
 use Sulu\Component\Webspace\Manager\WebspaceManagerInterface;
-use Havex\Bundle\SuluNewsBundle\Entity\HavexNews;
+use Havex\Bundle\SuluNewsBundle\Entity\HavexHavexNews;
 
 class NewsAdmin extends Admin
 {
@@ -72,7 +72,7 @@ class NewsAdmin extends Admin
         // Configure news List View
         $listToolbarActions = [new ToolbarAction('sulu_admin.add'), new ToolbarAction('sulu_admin.delete')];
         $listView = $this->viewBuilderFactory->createListViewBuilder(self::NEWS_LIST_VIEW, '/news/:locale')
-            ->setResourceKey(HavexNews::RESOURCE_KEY)
+            ->setResourceKey(HavexHavexNews::RESOURCE_KEY)
             ->setListKey(self::NEWS_LIST_KEY)
             ->setTitle('sulu.havex.news')
             ->addListAdapters(['table'])
@@ -84,13 +84,13 @@ class NewsAdmin extends Admin
         $viewCollection->add($listView);
 
         $addFormView = $this->viewBuilderFactory->createResourceTabViewBuilder(self::NEWS_ADD_FORM_VIEW, '/news/:locale/add')
-            ->setResourceKey(HavexNews::RESOURCE_KEY)
+            ->setResourceKey(HavexHavexNews::RESOURCE_KEY)
             ->setBackView(static::NEWS_LIST_VIEW)
             ->addLocales($locales);
         $viewCollection->add($addFormView);
 
         $addDetailsFormView = $this->viewBuilderFactory->createFormViewBuilder(self::NEWS_ADD_FORM_VIEW . '.details', '/details')
-            ->setResourceKey(HavexNews::RESOURCE_KEY)
+            ->setResourceKey(HavexHavexNews::RESOURCE_KEY)
             ->setFormKey(self::NEWS_FORM_KEY_ADD)
             ->setTabTitle('sulu_admin.details')
             ->setEditView(static::NEWS_EDIT_FORM_VIEW)
@@ -100,7 +100,7 @@ class NewsAdmin extends Admin
 
         // Configure news Edit View
         $editFormView = $this->viewBuilderFactory->createResourceTabViewBuilder(static::NEWS_EDIT_FORM_VIEW, '/news/:locale/:id')
-            ->setResourceKey(HavexNews::RESOURCE_KEY)
+            ->setResourceKey(HavexHavexNews::RESOURCE_KEY)
             ->setBackView(static::NEWS_LIST_VIEW)
             ->setTitleProperty('title')
             ->addLocales($locales);
@@ -119,7 +119,7 @@ class NewsAdmin extends Admin
 
         $viewCollection->add(
             $this->viewBuilderFactory->createPreviewFormViewBuilder(static::NEWS_EDIT_FORM_VIEW . '.details', '/details')
-                ->setResourceKey(HavexNews::RESOURCE_KEY)
+                ->setResourceKey(HavexHavexNews::RESOURCE_KEY)
                 ->setFormKey(self::NEWS_FORM_KEY_EDIT)
                 ->setTabTitle('sulu_admin.details')
                 ->addToolbarActions($formToolbarActions)
@@ -128,7 +128,7 @@ class NewsAdmin extends Admin
 
         $viewCollection->add(
             $this->viewBuilderFactory->createPreviewFormViewBuilder(static::NEWS_EDIT_FORM_VIEW . '.details_settings', '/details-settings')
-                ->setResourceKey(HavexNews::RESOURCE_KEY)
+                ->setResourceKey(HavexHavexNews::RESOURCE_KEY)
                 ->setFormKey(self::NEWS_FORM_KEY_SETTINGS)
                 ->setTabTitle('sulu_admin.settings')
                 ->addToolbarActions($formToolbarActions)
@@ -140,7 +140,7 @@ class NewsAdmin extends Admin
                     ->createActivityListViewBuilder(
                         static::NEWS_EDIT_FORM_VIEW . '.activity',
                         '/activity',
-                        HavexNews::RESOURCE_KEY
+                        HavexHavexNews::RESOURCE_KEY
                     )
                     ->setParent(static::NEWS_EDIT_FORM_VIEW)
             );
@@ -150,7 +150,7 @@ class NewsAdmin extends Admin
         $test = $this->viewBuilderFactory->createPreviewFormViewBuilder(static::NEWS_EDIT_FORM_VIEW . '.details_seo', '/seo');
         $viewCollection->add(
             $test->disablePreviewWebspaceChooser()
-                ->setResourceKey(HavexNews::RESOURCE_KEY)
+                ->setResourceKey(HavexHavexNews::RESOURCE_KEY)
                 ->setFormKey('news_seo')
                 ->setTabTitle('sulu_page.seo')
                 ->addToolbarActions($formToolbarActions)
@@ -164,7 +164,7 @@ class NewsAdmin extends Admin
     {
         return [
             'Sulu' => [
-                'HavexNews' => [
+                'HavexHavexNews' => [
                     static::SECURITY_CONTEXT => [
                         PermissionTypes::VIEW,
                         PermissionTypes::ADD,
@@ -178,6 +178,6 @@ class NewsAdmin extends Admin
 
     public function getConfigKey(): ?string
     {
-        return 'sulu_news';
+        return 'sulu_havex_news';
     }
 }

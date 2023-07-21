@@ -15,7 +15,7 @@ namespace Havex\Bundle\SuluNewsBundle\Preview;
 
 use Sulu\Bundle\PreviewBundle\Preview\Object\PreviewObjectProviderInterface;
 use Havex\Bundle\SuluNewsBundle\Admin\NewsAdmin;
-use Havex\Bundle\SuluNewsBundle\Entity\HavexNews;
+use Havex\Bundle\SuluNewsBundle\Entity\HavexHavexNews;
 use Havex\Bundle\SuluNewsBundle\Repository\NewsRepository;
 
 class NewsObjectProvider implements PreviewObjectProviderInterface
@@ -24,7 +24,7 @@ class NewsObjectProvider implements PreviewObjectProviderInterface
     {
     }
 
-    public function getObject($id, $locale): ?HavexNews
+    public function getObject($id, $locale): ?HavexHavexNews
     {
         return $this->newsRepository->findById((int) $id);
     }
@@ -39,7 +39,7 @@ class NewsObjectProvider implements PreviewObjectProviderInterface
         // TODO: Implement setValues() method.
     }
 
-    public function setContext($object, $locale, array $context): HavexNews
+    public function setContext($object, $locale, array $context): HavexHavexNews
     {
         if (\array_key_exists('template', $context)) {
             $object->setStructureType($context['template']);
@@ -53,7 +53,7 @@ class NewsObjectProvider implements PreviewObjectProviderInterface
         return \serialize($object);
     }
 
-    public function deserialize($serializedObject, $objectClass): HavexNews
+    public function deserialize($serializedObject, $objectClass): HavexHavexNews
     {
         return \unserialize($serializedObject);
     }

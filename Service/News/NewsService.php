@@ -20,7 +20,7 @@ use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInt
 use Symfony\Component\Security\Core\User\UserInterface;
 use Havex\Bundle\SuluNewsBundle\Entity\Factory\NewsFactory;
 use Havex\Bundle\SuluNewsBundle\Entity\Factory\NewsRouteFactory;
-use Havex\Bundle\SuluNewsBundle\Entity\HavexNews;
+use Havex\Bundle\SuluNewsBundle\Entity\HavexHavexNews;
 use Havex\Bundle\SuluNewsBundle\Event\NewsCreatedActivityEvent;
 use Havex\Bundle\SuluNewsBundle\Event\NewsModifiedActivityEvent;
 use Havex\Bundle\SuluNewsBundle\Event\NewsRemovedActivityEvent;
@@ -52,15 +52,15 @@ class NewsService implements NewsServiceInterface
      * @throws ORMException
      * @throws OptimisticLockException
      */
-    public function saveNewNews(array $data, string $locale): HavexNews
+    public function saveNewNews(array $data, string $locale): HavexHavexNews
     {
         $news = null;
         try {
-            $news = $this->newsFactory->generateNewsFromRequest(new HavexNews(), $data, $locale);
+            $news = $this->newsFactory->generateNewsFromRequest(new HavexHavexNews(), $data, $locale);
         } catch (\Exception) {
         }
 
-        /** @var HavexNews $news */
+        /** @var HavexHavexNews $news */
         if (!$news->getCreator()) {
             $news->setCreator($this->loginUser->getContact());
         }
@@ -82,7 +82,7 @@ class NewsService implements NewsServiceInterface
      * @throws ORMException
      * @throws OptimisticLockException
      */
-    public function updateNews($data, HavexNews $news, string $locale): HavexNews
+    public function updateNews($data, HavexHavexNews $news, string $locale): HavexHavexNews
     {
         try {
             $news = $this->newsFactory->generateNewsFromRequest($news, $data, $locale);
@@ -102,7 +102,7 @@ class NewsService implements NewsServiceInterface
         return $news;
     }
 
-    public function updateNewsPublish(HavexNews $news, array $data): HavexNews
+    public function updateNewsPublish(HavexHavexNews $news, array $data): HavexHavexNews
     {
         switch ($data['action']) {
             case 'enable':
@@ -124,7 +124,7 @@ class NewsService implements NewsServiceInterface
     public function removeNews(int $id): void
     {
         $news = $this->newsRepository->findById($id);
-        if (!$news instanceof HavexNews) {
+        if (!$news instanceof HavexHavexNews) {
             throw new \Exception($id);
         }
 

@@ -4,6 +4,6 @@ sulu_admin:
 
 app_news:
   type: rest
-  resource: sulu_news.rest.controller
+  resource: sulu_havex_news.rest.controller
   prefix: /admin/api
   name_prefix: news.

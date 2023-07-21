@@ -20,7 +20,7 @@ use Symfony\Component\DependencyInjection\Extension\PrependExtensionInterface;
 use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Havex\Bundle\SuluNewsBundle\Admin\NewsAdmin;
-use Havex\Bundle\SuluNewsBundle\Entity\HavexNews;
+use Havex\Bundle\SuluNewsBundle\Entity\HavexHavexNews;
 
 /**
  * This is the class that loads and manages your bundle configuration.
@@ -42,7 +42,7 @@ class NewsExtension extends Extension implements PrependExtensionInterface
                 [
                     'indexes' => [
                         'news' => [
-                            'name' => 'HavexNews',
+                            'name' => 'HavexHavexNews',
                             'icon' => 'su-pen',
                             'view' => [
                                 'name' => NewsAdmin::NEWS_EDIT_FORM_VIEW,
@@ -63,10 +63,10 @@ class NewsExtension extends Extension implements PrependExtensionInterface
                 'sulu_route',
                 [
                     'mappings' => [
-                        HavexNews::class => [
+                        HavexHavexNews::class => [
                             'generator' => 'schema',
                             'options' => ['route_schema' => '/news/{object.getId()}'],
-                            'resource_key' => HavexNews::RESOURCE_KEY,
+                            'resource_key' => HavexHavexNews::RESOURCE_KEY,
                         ],
                     ],
                 ]
@@ -99,7 +99,7 @@ class NewsExtension extends Extension implements PrependExtensionInterface
                         'selection' => [
                             'havex_news_selection' => [
                                 'default_type' => 'list_overlay',
-                                'resource_key' => HavexNews::RESOURCE_KEY,
+                                'resource_key' => HavexHavexNews::RESOURCE_KEY,
                                 'view' => [
                                     'name' => 'app.news_edit_form',
                                     'result_to_view' => [
@@ -115,9 +115,9 @@ class NewsExtension extends Extension implements PrependExtensionInterface
                                         'adapter' => 'table',
                                         'list_key' => 'news',
                                         'display_properties' => ['title'],
-                                        'label' => 'sulu_news.news_select',
+                                        'label' => 'sulu_havex_news.news_select',
                                         'icon' => 'su-pen',
-                                        'overlay_title' => 'sulu_news.single_havex_news_selection_overlay_title',
+                                        'overlay_title' => 'sulu_havex_news.single_havex_news_selection_overlay_title',
                                     ],
                                 ],
                             ],
@@ -128,7 +128,7 @@ class NewsExtension extends Extension implements PrependExtensionInterface
         }
 
         $container->prependExtensionConfig(
-            'sulu_news',
+            'sulu_havex_news',
             ['templates' => ['view' => 'news/index.html.twig']]
         );
 

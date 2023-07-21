@@ -15,7 +15,7 @@ namespace Havex\Bundle\SuluNewsBundle\Entity\Factory;
 
 use Sulu\Bundle\TagBundle\Tag\TagManagerInterface;
 use Sulu\Component\Persistence\RelationTrait;
-use Havex\Bundle\SuluNewsBundle\Entity\HavexNews;
+use Havex\Bundle\SuluNewsBundle\Entity\HavexHavexNews;
 
 class TagFactory extends AbstractFactory implements TagFactoryInterface
 {
@@ -33,7 +33,7 @@ class TagFactory extends AbstractFactory implements TagFactoryInterface
      *
      * @return bool
      */
-    public function processTags(HavexNews $news, $tags)
+    public function processTags(HavexHavexNews $news, $tags)
     {
         $get = fn ($tag) => $tag->getId();
 
@@ -70,7 +70,7 @@ class TagFactory extends AbstractFactory implements TagFactoryInterface
      *
      * @return bool True if there was no error, otherwise false
      */
-    protected function addTag(HavexNews $news, mixed $data): bool
+    protected function addTag(HavexHavexNews $news, mixed $data): bool
     {
         $resolvedTag = $this->getTagManager()->findOrCreateByName($data);
         $news->addTag($resolvedTag);

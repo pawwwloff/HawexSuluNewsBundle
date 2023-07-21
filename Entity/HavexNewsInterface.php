@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Havex\Bundle\SuluNewsBundle\Entity;
 
-interface NewsInterface
+interface HavexNewsInterface
 {
     public function getId(): ?int;
 

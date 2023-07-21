@@ -16,7 +16,7 @@ namespace Havex\Bundle\SuluNewsBundle;
 use Sulu\Bundle\PersistenceBundle\PersistenceBundleTrait;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
-use Havex\Bundle\SuluNewsBundle\Entity\NewsInterface;
+use Havex\Bundle\SuluNewsBundle\Entity\HavexNewsInterface;
 
 class HavexNewsBundle extends Bundle
 {
@@ -26,7 +26,7 @@ class HavexNewsBundle extends Bundle
     {
         $this->buildPersistence(
             [
-                NewsInterface::class => 'sulu.model.havex_news.class',
+                HavexNewsInterface::class => 'sulu.model.havex_news.class',
             ],
             $container
         );

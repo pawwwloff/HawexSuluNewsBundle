@@ -15,7 +15,7 @@ namespace Havex\Bundle\SuluNewsBundle\Entity\Factory;
 
 use Sulu\Bundle\ContactBundle\Entity\ContactRepositoryInterface;
 use Sulu\Component\Persistence\RelationTrait;
-use Havex\Bundle\SuluNewsBundle\Entity\HavexNews;
+use Havex\Bundle\SuluNewsBundle\Entity\HavexHavexNews;
 
 class NewsFactory extends AbstractFactory implements NewsFactoryInterface
 {
@@ -33,7 +33,7 @@ class NewsFactory extends AbstractFactory implements NewsFactoryInterface
      *
      * @throws \Exception
      */
-    public function generateNewsFromRequest(HavexNews $news, array $data, string $locale = null, $state = null): HavexNews
+    public function generateNewsFromRequest(HavexHavexNews $news, array $data, string $locale = null, $state = null): HavexHavexNews
     {
         if ($this->getProperty($data, 'title')) {
             $news->setTitle($this->getProperty($data, 'title'));

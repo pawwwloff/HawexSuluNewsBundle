@@ -3,17 +3,17 @@
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
-        <service id="sulu_news.rest.controller" class="Havex\Bundle\SuluNewsBundle\Controller\Admin\NewsController"
+        <service id="sulu_havex_news.rest.controller" class="Havex\Bundle\SuluNewsBundle\Controller\Admin\NewsController"
                  public="true">
             <argument type="service" id="fos_rest.view_handler.default"/>
             <argument type="service" id="security.token_storage"/>
-            <argument type="service" id="sulu_news.repository"/>
-            <argument type="service" id="sulu_news.service"/>
-            <argument type="service" id="sulu_news.list.presentation"/>
+            <argument type="service" id="sulu_havex_news.repository"/>
+            <argument type="service" id="sulu_havex_news.service"/>
+            <argument type="service" id="sulu_havex_news.list.presentation"/>
             <tag name="sulu.context" context="admin"/>
         </service>
 
-        <service id="sulu_news.controller" class="Havex\Bundle\SuluNewsBundle\Controller\NewsWebsiteController" autowire="true"
+        <service id="sulu_havex_news.controller" class="Havex\Bundle\SuluNewsBundle\Controller\NewsWebsiteController" autowire="true"
                  public="true">
             <tag name="controller.service_arguments"/>
             <tag name="container.service_subscriber"/>

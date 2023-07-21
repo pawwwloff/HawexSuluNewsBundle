@@ -15,7 +15,7 @@ namespace Havex\Bundle\SuluNewsBundle\Content;
 
 use JMS\Serializer\Annotation as Serializer;
 use Sulu\Component\SmartContent\ItemInterface;
-use Havex\Bundle\SuluNewsBundle\Entity\HavexNews;
+use Havex\Bundle\SuluNewsBundle\Entity\HavexHavexNews;
 
 class NewsDataItem implements ItemInterface
 {
@@ -26,7 +26,7 @@ class NewsDataItem implements ItemInterface
         /**
          * @Serializer\Exclude
          */
-        private readonly HavexNews $entity
+        private readonly HavexHavexNews $entity
     ) {
     }
 
@@ -55,7 +55,7 @@ class NewsDataItem implements ItemInterface
     }
 
     /**
-     * @return mixed|HavexNews
+     * @return mixed|HavexHavexNews
      */
     public function getResource()
     {

@@ -4,7 +4,7 @@
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
 
-        <service id="sulu_news.admin" class="Havex\Bundle\SuluNewsBundle\Admin\NewsAdmin">
+        <service id="sulu_havex_news.admin" class="Havex\Bundle\SuluNewsBundle\Admin\NewsAdmin">
             <argument type="service" id="sulu_admin.view_builder_factory"/>
             <argument type="service" id="sulu_core.webspace.webspace_manager"/>
             <argument type="service" id="sulu_security.security_checker"/>
@@ -14,7 +14,7 @@
             <tag name="sulu.context" context="admin"/>
         </service>
 
-        <service id="sulu_news.repository" class="Havex\Bundle\SuluNewsBundle\Repository\NewsRepository"
+        <service id="sulu_havex_news.repository" class="Havex\Bundle\SuluNewsBundle\Repository\NewsRepository"
                  public="true" lazy="true">
             <argument type="service" id="doctrine.orm.default_entity_manager"/>
             <argument type="service">
@@ -26,7 +26,7 @@
         </service>
 
 
-        <service id="sulu_news.list.presentation" public="true"
+        <service id="sulu_havex_news.list.presentation" public="true"
                  class="Havex\Bundle\SuluNewsBundle\Admin\DoctrineListRepresentationFactory">
             <argument type="service" id="sulu_core.rest_helper"/>
             <argument type="service" id="sulu_core.doctrine_list_builder_factory"/>
@@ -36,65 +36,65 @@
             <tag name="sulu.context" context="admin"/>
         </service>
 
-        <service id="sulu_news.media.factory" public="true"
+        <service id="sulu_havex_news.media.factory" public="true"
                  class="Havex\Bundle\SuluNewsBundle\Entity\Factory\MediaFactory">
             <argument type="service" id="sulu.repository.media"/>
 
             <tag name="sulu.context" context="admin"/>
         </service>
 
-        <service id="sulu_news.news.factory" public="true"
+        <service id="sulu_havex_news.news.factory" public="true"
                  class="Havex\Bundle\SuluNewsBundle\Entity\Factory\NewsFactory">
-            <argument type="service" id="sulu_news.media.factory"/>
-            <argument type="service" id="sulu_news.tag.factory"/>
+            <argument type="service" id="sulu_havex_news.media.factory"/>
+            <argument type="service" id="sulu_havex_news.tag.factory"/>
             <argument type="service" id="sulu.repository.contact"/>
             <tag name="sulu.context" context="admin"/>
         </service>
 
-        <service id="sulu_news.tag.factory" public="true"
+        <service id="sulu_havex_news.tag.factory" public="true"
                  class="Havex\Bundle\SuluNewsBundle\Entity\Factory\TagFactory">
             <argument type="service" id="sulu_tag.tag_manager"/>
 
             <tag name="sulu.context" context="admin"/>
         </service>
 
-        <service id="sulu_news.smart.content" public="true"
+        <service id="sulu_havex_news.smart.content" public="true"
                  class="Havex\Bundle\SuluNewsBundle\Content\NewsDataProvider">
             <tag name="sulu.smart_content.data_provider" alias="news"/>
-            <argument type="service" id="sulu_news.repository"/>
+            <argument type="service" id="sulu_havex_news.repository"/>
             <argument type="service" id="sulu_core.array_serializer"/>
         </service>
 
-        <service id="sulu_news.service" public="true" class="Havex\Bundle\SuluNewsBundle\Service\News\NewsService">
-            <argument type="service" id="sulu_news.repository"/>
-            <argument type="service" id="sulu_news.news.factory"/>
-            <argument type="service" id="sulu_news.route.factory"/>
+        <service id="sulu_havex_news.service" public="true" class="Havex\Bundle\SuluNewsBundle\Service\News\NewsService">
+            <argument type="service" id="sulu_havex_news.repository"/>
+            <argument type="service" id="sulu_havex_news.news.factory"/>
+            <argument type="service" id="sulu_havex_news.route.factory"/>
             <argument type="service" id="security.token_storage"/>
             <argument type="service" id="sulu_activity.domain_event_collector"/>
 
             <tag name="sulu.context" context="admin"/>
         </service>
 
-        <service id="sulu_news.object_provider" public="true" class="Havex\Bundle\SuluNewsBundle\Preview\NewsObjectProvider">
-            <argument type="service" id="sulu_news.repository"/>
+        <service id="sulu_havex_news.object_provider" public="true" class="Havex\Bundle\SuluNewsBundle\Preview\NewsObjectProvider">
+            <argument type="service" id="sulu_havex_news.repository"/>
             <tag name="sulu_preview.object_provider" provider-key="news"/>
         </service>
 
-        <service id="sulu_news.route.factory" public="true" class="Havex\Bundle\SuluNewsBundle\Entity\Factory\NewsRouteFactory">
+        <service id="sulu_havex_news.route.factory" public="true" class="Havex\Bundle\SuluNewsBundle\Entity\Factory\NewsRouteFactory">
             <argument type="service" id="sulu_route.manager.route_manager"/>
         </service>
 
-        <service id="sulu_news.routing_provider" public="true" class="Havex\Bundle\SuluNewsBundle\Routing\NewsRouteDefaultProvider">
-            <argument type="service" id="sulu_news.repository"/>
+        <service id="sulu_havex_news.routing_provider" public="true" class="Havex\Bundle\SuluNewsBundle\Routing\NewsRouteDefaultProvider">
+            <argument type="service" id="sulu_havex_news.repository"/>
             <tag name="sulu_route.defaults_provider"/>
         </service>
-        <service id="sulu_news.content.type.havex_news_selection" class="Havex\Bundle\SuluNewsBundle\Content\NewsSelectionContentType">
+        <service id="sulu_havex_news.content.type.havex_news_selection" class="Havex\Bundle\SuluNewsBundle\Content\NewsSelectionContentType">
             <tag name="sulu.content.type" alias="havex_news_selection"/>
             <tag name="sulu.content.export" format="1.2.xliff" translate="false" />
-            <argument type="service" id="sulu_news.repository"/>
+            <argument type="service" id="sulu_havex_news.repository"/>
         </service>
         <service id="sulu_contact.twig" class="Havex\Bundle\SuluNewsBundle\Twig\NewsTwigExtension">
-            <argument type="service" id="sulu_news.repository"/>
+            <argument type="service" id="sulu_havex_news.repository"/>
             <tag name="twig.extension"/>
         </service>
     </services>

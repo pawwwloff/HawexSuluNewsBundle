@@ -14,11 +14,11 @@ declare(strict_types=1);
 namespace Havex\Bundle\SuluNewsBundle\Entity\Factory;
 
 use Sulu\Bundle\RouteBundle\Model\RouteInterface;
-use Havex\Bundle\SuluNewsBundle\Entity\HavexNews;
+use Havex\Bundle\SuluNewsBundle\Entity\HavexHavexNews;
 
 interface NewsRouteFactoryInterface
 {
-    public function generateNewsRoute(HavexNews $news): RouteInterface;
+    public function generateNewsRoute(HavexHavexNews $news): RouteInterface;
 
-    public function updateNewsRoute(HavexNews $news, string $routePath): RouteInterface;
+    public function updateNewsRoute(HavexHavexNews $news, string $routePath): RouteInterface;
 }

@@ -31,9 +31,9 @@ bin/console doctrine:schema:update --force
     
 Define the Admin Api Route in `routes_admin.yaml`
 ```yaml
-sulu_news.admin:
+sulu_havex_news.admin:
   type: rest
-  resource: sulu_news.rest.controller
+  resource: sulu_havex_news.rest.controller
   prefix: /admin/api
   name_prefix: app.
 ```

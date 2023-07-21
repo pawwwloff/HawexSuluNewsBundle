@@ -15,21 +15,21 @@ namespace Havex\Bundle\SuluNewsBundle\Tests\Unit\Traits\Entity;
 
 use DateTime;
 use Sulu\Bundle\RouteBundle\Entity\Route;
-use Havex\Bundle\SuluNewsBundle\Entity\HavexNews;
+use Havex\Bundle\SuluNewsBundle\Entity\HavexHavexNews;
 
 /**
  * Trait NewsTrait.
  */
 trait NewsTrait
 {
-    public function generateEmptyNews(): HavexNews
+    public function generateEmptyNews(): HavexHavexNews
     {
-        return new HavexNews();
+        return new HavexHavexNews();
     }
 
-    public function generateNewsWithContent(): HavexNews
+    public function generateNewsWithContent(): HavexHavexNews
     {
-        $news = new HavexNews();
+        $news = new HavexHavexNews();
         $contentArray = $this->generateNewsContentArray();
 
         $news->setId($contentArray['id']);
@@ -61,15 +61,15 @@ trait NewsTrait
                 ],
             ],
             'locale' => 'en',
-            'route' => new Route('/test-1', 1, HavexNews::class, 'en'),
+            'route' => new Route('/test-1', 1, HavexHavexNews::class, 'en'),
             'enable' => true,
             'publishedAt' => '2017-08-31 00:00:00',
         ];
     }
 
-    public function generateSecondNewsWithContent(): HavexNews
+    public function generateSecondNewsWithContent(): HavexHavexNews
     {
-        $news = new HavexNews();
+        $news = new HavexHavexNews();
         $contentArray = $this->generateSecondNewsContentArray();
 
         $news->setId($contentArray['id']);
@@ -101,7 +101,7 @@ trait NewsTrait
                 ],
             ],
             'locale' => 'en',
-            'route' => new Route('/test-2', 2, HavexNews::class, 'en'),
+            'route' => new Route('/test-2', 2, HavexHavexNews::class, 'en'),
             'enable' => true,
             'publishedAt' => '2017-08-31 00:00:00',
         ];
@@ -115,7 +115,7 @@ trait NewsTrait
             'teaser' => 'Test',
             'content' => [],
             'locale' => 'en',
-            'route' => new Route('/test-3', 3, HavexNews::class, 'en'),
+            'route' => new Route('/test-3', 3, HavexHavexNews::class, 'en'),
             'enable' => true,
             'publishedAt' => '2017-08-31 00:00:00',
         ];
