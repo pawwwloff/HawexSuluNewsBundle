@@ -15,7 +15,7 @@ namespace Havex\Bundle\SuluNewsBundle\Repository;
 
 use Doctrine\ORM\EntityRepository;
 use Sulu\Component\SmartContent\Orm\DataProviderRepositoryInterface;
-use Havex\Bundle\SuluNewsBundle\Entity\News;
+use Havex\Bundle\SuluNewsBundle\Entity\HavexNews;
 
 /**
  * Class NewsRepository.
@@ -26,7 +26,7 @@ class NewsRepository extends EntityRepository implements DataProviderRepositoryI
      * @throws \Doctrine\ORM\ORMException
      * @throws \Doctrine\ORM\OptimisticLockException
      */
-    public function save(News $news): void
+    public function save(HavexNews $news): void
     {
         $this->getEntityManager()->persist($news);
         $this->getEntityManager()->flush();
@@ -36,7 +36,7 @@ class NewsRepository extends EntityRepository implements DataProviderRepositoryI
     {
         $qb = $this->getEntityManager()->createQueryBuilder();
         $qb->select('n')
-            ->from('HavexNewsBundle:News', 'n')
+            ->from('HavexNewsBundle:HavexNews', 'n')
             ->where('n.enabled = 1')
             ->andWhere('n.publishedAt <= :created')
             ->setParameter('created', \date('Y-m-d H:i:s'))
@@ -51,7 +51,7 @@ class NewsRepository extends EntityRepository implements DataProviderRepositoryI
         return $news;
     }
 
-    public function findById(int $id): ?News
+    public function findById(int $id): ?HavexNews
     {
         $news = $this->find($id);
         if (!$news) {

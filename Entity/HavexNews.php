@@ -23,7 +23,7 @@ use Sulu\Bundle\RouteBundle\Model\RouteInterface;
 use Sulu\Bundle\TagBundle\Tag\TagInterface;
 use Sulu\Component\Persistence\Model\AuditableInterface;
 
-class News implements NewsInterface, AuditableInterface, RoutableInterface
+class HavexNews implements NewsInterface, AuditableInterface, RoutableInterface
 {
     final public const RESOURCE_KEY = 'havex_news';
 
@@ -76,7 +76,7 @@ class News implements NewsInterface, AuditableInterface, RoutableInterface
     private $seo;
 
     /**
-     * News constructor.
+     * HavexNews constructor.
      */
     public function __construct()
     {

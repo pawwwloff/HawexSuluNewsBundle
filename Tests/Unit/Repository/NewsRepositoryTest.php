@@ -17,7 +17,7 @@ use DateTime;
 use Doctrine\ORM\EntityManager;
 use Sulu\Bundle\TestBundle\Testing\PurgeDatabaseTrait;
 use Sulu\Bundle\TestBundle\Testing\SuluTestCase;
-use Havex\Bundle\SuluNewsBundle\Entity\News;
+use Havex\Bundle\SuluNewsBundle\Entity\HavexNews;
 use Havex\Bundle\SuluNewsBundle\Repository\NewsRepository;
 use Havex\Bundle\SuluNewsBundle\Tests\Unit\Traits\Api\NewsTrait;
 
@@ -44,7 +44,7 @@ final class NewsRepositoryTest extends SuluTestCase
     protected function setUp(): void
     {
         $this->em = $this->getEntityManager();
-        $this->newsRepository = $this->em->getRepository(News::class);
+        $this->newsRepository = $this->em->getRepository(HavexNews::class);
         $this->purgeDatabase();
     }
 

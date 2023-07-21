@@ -5,14 +5,14 @@
     <joins name="changer">
         <join>
             <entity-name>%sulu.model.user.class%</entity-name>
-            <field-name>%sulu.model.havex.news.class%.changer</field-name>
+            <field-name>%sulu.model.havex_news.class%.changer</field-name>
         </join>
     </joins>
 
     <joins name="creator">
         <join>
             <entity-name>%sulu.model.contact.class%</entity-name>
-            <field-name>%sulu.model.havex.news.class%.creator</field-name>
+            <field-name>%sulu.model.havex_news.class%.creator</field-name>
         </join>
     </joins>
 
@@ -31,7 +31,7 @@
             <joins>
                 <join>
                     <entity-name>SuluMediaBundle:Media</entity-name>
-                    <field-name>%sulu.model.havex.news.class%.header</field-name>
+                    <field-name>%sulu.model.havex_news.class%.header</field-name>
                 </join>
             </joins>
         </property>
@@ -88,7 +88,7 @@
                 type="datetime"
         >
             <field-name>created</field-name>
-            <entity-name>%sulu.model.havex.news.class%</entity-name>
+            <entity-name>%sulu.model.havex_news.class%</entity-name>
 
             <filter type="datetime" />
         </property>
@@ -122,7 +122,7 @@
                 translation="sulu_admin.changed"
         >
             <field-name>changed</field-name>
-            <entity-name>%sulu.model.havex.news.class%</entity-name>
+            <entity-name>%sulu.model.havex_news.class%</entity-name>
 
             <filter type="datetime" />
         </property>

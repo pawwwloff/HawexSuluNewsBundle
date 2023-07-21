@@ -13,9 +13,9 @@ declare(strict_types=1);
 
 namespace Havex\Bundle\SuluNewsBundle\Entity\Factory;
 
-use Havex\Bundle\SuluNewsBundle\Entity\News;
+use Havex\Bundle\SuluNewsBundle\Entity\HavexNews;
 
 interface NewsFactoryInterface
 {
-    public function generateNewsFromRequest(News $news, array $data, string $locale): News;
+    public function generateNewsFromRequest(HavexNews $news, array $data, string $locale): HavexNews;
 }

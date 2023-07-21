@@ -15,7 +15,7 @@ namespace Havex\Bundle\SuluNewsBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
-use Havex\Bundle\SuluNewsBundle\Entity\News;
+use Havex\Bundle\SuluNewsBundle\Entity\HavexNews;
 use Havex\Bundle\SuluNewsBundle\Repository\NewsRepository;
 
 /**
@@ -35,7 +35,7 @@ class Configuration implements ConfigurationInterface
             ->arrayNode('news')
             ->addDefaultsIfNotSet()
             ->children()
-            ->scalarNode('model')->defaultValue(News::class)->end()
+            ->scalarNode('model')->defaultValue(HavexNews::class)->end()
             ->scalarNode('repository')->defaultValue(NewsRepository::class)->end()
             ->end()
             ->end()

@@ -15,21 +15,21 @@ namespace Havex\Bundle\SuluNewsBundle\Tests\Unit\Traits\Entity;
 
 use DateTime;
 use Sulu\Bundle\RouteBundle\Entity\Route;
-use Havex\Bundle\SuluNewsBundle\Entity\News;
+use Havex\Bundle\SuluNewsBundle\Entity\HavexNews;
 
 /**
  * Trait NewsTrait.
  */
 trait NewsTrait
 {
-    public function generateEmptyNews(): News
+    public function generateEmptyNews(): HavexNews
     {
-        return new News();
+        return new HavexNews();
     }
 
-    public function generateNewsWithContent(): News
+    public function generateNewsWithContent(): HavexNews
     {
-        $news = new News();
+        $news = new HavexNews();
         $contentArray = $this->generateNewsContentArray();
 
         $news->setId($contentArray['id']);
@@ -61,15 +61,15 @@ trait NewsTrait
                 ],
             ],
             'locale' => 'en',
-            'route' => new Route('/test-1', 1, News::class, 'en'),
+            'route' => new Route('/test-1', 1, HavexNews::class, 'en'),
             'enable' => true,
             'publishedAt' => '2017-08-31 00:00:00',
         ];
     }
 
-    public function generateSecondNewsWithContent(): News
+    public function generateSecondNewsWithContent(): HavexNews
     {
-        $news = new News();
+        $news = new HavexNews();
         $contentArray = $this->generateSecondNewsContentArray();
 
         $news->setId($contentArray['id']);
@@ -101,7 +101,7 @@ trait NewsTrait
                 ],
             ],
             'locale' => 'en',
-            'route' => new Route('/test-2', 2, News::class, 'en'),
+            'route' => new Route('/test-2', 2, HavexNews::class, 'en'),
             'enable' => true,
             'publishedAt' => '2017-08-31 00:00:00',
         ];
@@ -115,7 +115,7 @@ trait NewsTrait
             'teaser' => 'Test',
             'content' => [],
             'locale' => 'en',
-            'route' => new Route('/test-3', 3, News::class, 'en'),
+            'route' => new Route('/test-3', 3, HavexNews::class, 'en'),
             'enable' => true,
             'publishedAt' => '2017-08-31 00:00:00',
         ];

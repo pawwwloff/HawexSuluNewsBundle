@@ -13,11 +13,11 @@ declare(strict_types=1);
 
 namespace Havex\Bundle\SuluNewsBundle\Service\News;
 
-use Havex\Bundle\SuluNewsBundle\Entity\News;
+use Havex\Bundle\SuluNewsBundle\Entity\HavexNews;
 
 interface NewsServiceInterface
 {
-    public function saveNewNews(array $data, string $locale): News;
+    public function saveNewNews(array $data, string $locale): HavexNews;
 
-    public function updateNews($data, News $article, string $locale): News;
+    public function updateNews($data, HavexNews $article, string $locale): HavexNews;
 }

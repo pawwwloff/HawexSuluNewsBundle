@@ -15,7 +15,7 @@ namespace Havex\Bundle\SuluNewsBundle\Entity\Factory;
 
 use Sulu\Bundle\RouteBundle\Manager\RouteManager;
 use Sulu\Bundle\RouteBundle\Model\RouteInterface;
-use Havex\Bundle\SuluNewsBundle\Entity\News;
+use Havex\Bundle\SuluNewsBundle\Entity\HavexNews;
 
 class NewsRouteFactory implements NewsRouteFactoryInterface
 {
@@ -26,12 +26,12 @@ class NewsRouteFactory implements NewsRouteFactoryInterface
     {
     }
 
-    public function generateNewsRoute(News $news): RouteInterface
+    public function generateNewsRoute(HavexNews $news): RouteInterface
     {
         return $this->routeManager->create($news);
     }
 
-    public function updateNewsRoute(News $news, string $routePath): RouteInterface
+    public function updateNewsRoute(HavexNews $news, string $routePath): RouteInterface
     {
         return $this->routeManager->update($news, $routePath);
     }

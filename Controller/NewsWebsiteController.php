@@ -17,14 +17,14 @@ use Sulu\Bundle\PreviewBundle\Preview\Preview;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
-use Havex\Bundle\SuluNewsBundle\Entity\News;
+use Havex\Bundle\SuluNewsBundle\Entity\HavexNews;
 
 /**
  * Class NewsWebsiteController.
  */
 class NewsWebsiteController extends AbstractController
 {
-    public function indexAction(News $news, $attributes = [], $preview = false, $partial = false): Response
+    public function indexAction(HavexNews $news, $attributes = [], $preview = false, $partial = false): Response
     {
         if (!$news) {
             throw new NotFoundHttpException();

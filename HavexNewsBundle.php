@@ -26,7 +26,7 @@ class HavexNewsBundle extends Bundle
     {
         $this->buildPersistence(
             [
-                NewsInterface::class => 'sulu.model.havex.news.class',
+                NewsInterface::class => 'sulu.model.havex_news.class',
             ],
             $container
         );

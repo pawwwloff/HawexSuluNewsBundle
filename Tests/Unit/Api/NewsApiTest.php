@@ -14,7 +14,7 @@ declare(strict_types=1);
 namespace Havex\Bundle\SuluNewsBundle\Tests\Unit\Api;
 
 use PHPUnit\Framework\TestCase;
-use Havex\Bundle\SuluNewsBundle\Entity\News;
+use Havex\Bundle\SuluNewsBundle\Entity\HavexNews;
 use Havex\Bundle\SuluNewsBundle\Tests\Unit\Traits\Api\NewsTrait;
 
 /**
@@ -30,7 +30,7 @@ final class NewsApiTest extends TestCase
     {
         $apiDto = $this->generateEmptyApiNews();
 
-        static::assertInstanceOf(News::class, $apiDto->getEntity());
+        static::assertInstanceOf(HavexNews::class, $apiDto->getEntity());
 
         static::assertNull($apiDto->getId());
         static::assertNull($apiDto->getTitle());
@@ -46,7 +46,7 @@ final class NewsApiTest extends TestCase
     {
         $apiDto = $this->generateApiNewsWithContent();
 
-        static::assertInstanceOf(News::class, $apiDto->getEntity());
+        static::assertInstanceOf(HavexNews::class, $apiDto->getEntity());
 
         static::assertSame(1, $apiDto->getId());
         static::assertSame('Test Title', $apiDto->getTitle());
