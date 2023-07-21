@@ -11,11 +11,11 @@ declare(strict_types=1);
  * with this source code in the file LICENSE.
  */
 
-namespace TheCadien\Bundle\SuluNewsBundle\Routing;
+namespace Havex\Bundle\SuluNewsBundle\Routing;
 
 use Sulu\Bundle\RouteBundle\Routing\Defaults\RouteDefaultsProviderInterface;
-use TheCadien\Bundle\SuluNewsBundle\Entity\News;
-use TheCadien\Bundle\SuluNewsBundle\Repository\NewsRepository;
+use Havex\Bundle\SuluNewsBundle\Entity\News;
+use Havex\Bundle\SuluNewsBundle\Repository\NewsRepository;
 
 class NewsRouteDefaultProvider implements RouteDefaultsProviderInterface
 {

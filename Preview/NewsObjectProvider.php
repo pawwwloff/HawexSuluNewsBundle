@@ -11,12 +11,12 @@ declare(strict_types=1);
  * with this source code in the file LICENSE.
  */
 
-namespace TheCadien\Bundle\SuluNewsBundle\Preview;
+namespace Havex\Bundle\SuluNewsBundle\Preview;
 
 use Sulu\Bundle\PreviewBundle\Preview\Object\PreviewObjectProviderInterface;
-use TheCadien\Bundle\SuluNewsBundle\Admin\NewsAdmin;
-use TheCadien\Bundle\SuluNewsBundle\Entity\News;
-use TheCadien\Bundle\SuluNewsBundle\Repository\NewsRepository;
+use Havex\Bundle\SuluNewsBundle\Admin\NewsAdmin;
+use Havex\Bundle\SuluNewsBundle\Entity\News;
+use Havex\Bundle\SuluNewsBundle\Repository\NewsRepository;
 
 class NewsObjectProvider implements PreviewObjectProviderInterface
 {

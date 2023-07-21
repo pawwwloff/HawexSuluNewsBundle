@@ -11,16 +11,16 @@ declare(strict_types=1);
  * with this source code in the file LICENSE.
  */
 
-namespace TheCadien\Bundle\SuluNewsBundle\Tests\Unit\Entity\Factory;
+namespace Havex\Bundle\SuluNewsBundle\Tests\Unit\Entity\Factory;
 
 use PHPUnit\Framework\TestCase;
 use Sulu\Bundle\ContactBundle\Entity\Contact;
 use Sulu\Bundle\ContactBundle\Entity\ContactRepositoryInterface;
-use TheCadien\Bundle\SuluNewsBundle\Entity\Factory\MediaFactoryInterface;
-use TheCadien\Bundle\SuluNewsBundle\Entity\Factory\NewsFactory;
-use TheCadien\Bundle\SuluNewsBundle\Entity\Factory\TagFactoryInterface;
-use TheCadien\Bundle\SuluNewsBundle\Entity\News;
-use TheCadien\Bundle\SuluNewsBundle\Tests\Unit\Traits\Entity\NewsTrait;
+use Havex\Bundle\SuluNewsBundle\Entity\Factory\MediaFactoryInterface;
+use Havex\Bundle\SuluNewsBundle\Entity\Factory\NewsFactory;
+use Havex\Bundle\SuluNewsBundle\Entity\Factory\TagFactoryInterface;
+use Havex\Bundle\SuluNewsBundle\Entity\News;
+use Havex\Bundle\SuluNewsBundle\Tests\Unit\Traits\Entity\NewsTrait;
 
 /**
  * @internal

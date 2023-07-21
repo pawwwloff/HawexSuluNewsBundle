@@ -11,7 +11,7 @@ declare(strict_types=1);
  * with this source code in the file LICENSE.
  */
 
-namespace TheCadien\Bundle\SuluNewsBundle\DependencyInjection;
+namespace Havex\Bundle\SuluNewsBundle\DependencyInjection;
 
 use Sulu\Bundle\PersistenceBundle\DependencyInjection\PersistenceExtensionTrait;
 use Symfony\Component\Config\FileLocator;
@@ -19,8 +19,8 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\PrependExtensionInterface;
 use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
-use TheCadien\Bundle\SuluNewsBundle\Admin\NewsAdmin;
-use TheCadien\Bundle\SuluNewsBundle\Entity\News;
+use Havex\Bundle\SuluNewsBundle\Admin\NewsAdmin;
+use Havex\Bundle\SuluNewsBundle\Entity\News;
 
 /**
  * This is the class that loads and manages your bundle configuration.
@@ -43,7 +43,7 @@ class NewsExtension extends Extension implements PrependExtensionInterface
                     'indexes' => [
                         'news' => [
                             'name' => 'News',
-                            'icon' => 'su-newspaper',
+                            'icon' => 'su-pen',
                             'view' => [
                                 'name' => NewsAdmin::NEWS_EDIT_FORM_VIEW,
                                 'result_to_view' => [
@@ -97,7 +97,7 @@ class NewsExtension extends Extension implements PrependExtensionInterface
                     ],
                     'field_type_options' => [
                         'selection' => [
-                            'news_selection' => [
+                            'havex_news_selection' => [
                                 'default_type' => 'list_overlay',
                                 'resource_key' => News::RESOURCE_KEY,
                                 'view' => [
@@ -116,8 +116,8 @@ class NewsExtension extends Extension implements PrependExtensionInterface
                                         'list_key' => 'news',
                                         'display_properties' => ['title'],
                                         'label' => 'sulu_news.news_select',
-                                        'icon' => 'su-newspaper',
-                                        'overlay_title' => 'sulu_news.single_news_selection_overlay_title',
+                                        'icon' => 'su-pen',
+                                        'overlay_title' => 'sulu_news.single_havex_news_selection_overlay_title',
                                     ],
                                 ],
                             ],

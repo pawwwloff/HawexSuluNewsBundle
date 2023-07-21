@@ -11,7 +11,7 @@ declare(strict_types=1);
  * with this source code in the file LICENSE.
  */
 
-namespace TheCadien\Bundle\SuluNewsBundle\Entity;
+namespace Havex\Bundle\SuluNewsBundle\Entity;
 
 use DateTime;
 use Doctrine\Common\Collections\ArrayCollection;
@@ -25,7 +25,7 @@ use Sulu\Component\Persistence\Model\AuditableInterface;
 
 class News implements NewsInterface, AuditableInterface, RoutableInterface
 {
-    final public const RESOURCE_KEY = 'news';
+    final public const RESOURCE_KEY = 'havex_news';
 
     /**
      * @Accessor(getter="getTagNameArray")

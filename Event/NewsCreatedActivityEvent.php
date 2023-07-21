@@ -11,11 +11,11 @@ declare(strict_types=1);
  * with this source code in the file LICENSE.
  */
 
-namespace TheCadien\Bundle\SuluNewsBundle\Event;
+namespace Havex\Bundle\SuluNewsBundle\Event;
 
 use Sulu\Bundle\ActivityBundle\Domain\Event\DomainEvent;
-use TheCadien\Bundle\SuluNewsBundle\Admin\NewsAdmin;
-use TheCadien\Bundle\SuluNewsBundle\Entity\News;
+use Havex\Bundle\SuluNewsBundle\Admin\NewsAdmin;
+use Havex\Bundle\SuluNewsBundle\Entity\News;
 
 class NewsCreatedActivityEvent extends DomainEvent
 {

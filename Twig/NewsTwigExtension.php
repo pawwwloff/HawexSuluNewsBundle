@@ -11,10 +11,10 @@ declare(strict_types=1);
  * with this source code in the file LICENSE.
  */
 
-namespace TheCadien\Bundle\SuluNewsBundle\Twig;
+namespace Havex\Bundle\SuluNewsBundle\Twig;
 
-use TheCadien\Bundle\SuluNewsBundle\Entity\News;
-use TheCadien\Bundle\SuluNewsBundle\Repository\NewsRepository;
+use Havex\Bundle\SuluNewsBundle\Entity\News;
+use Havex\Bundle\SuluNewsBundle\Repository\NewsRepository;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;
 

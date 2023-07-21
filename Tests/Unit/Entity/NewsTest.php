@@ -11,10 +11,10 @@ declare(strict_types=1);
  * with this source code in the file LICENSE.
  */
 
-namespace TheCadien\Bundle\SuluNewsBundle\Tests\Unit\Entity;
+namespace Havex\Bundle\SuluNewsBundle\Tests\Unit\Entity;
 
 use PHPUnit\Framework\TestCase;
-use TheCadien\Bundle\SuluNewsBundle\Tests\Unit\Traits\Api\NewsTrait;
+use Havex\Bundle\SuluNewsBundle\Tests\Unit\Traits\Api\NewsTrait;
 
 /**
  * @internal

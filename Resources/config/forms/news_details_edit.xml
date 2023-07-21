@@ -14,13 +14,13 @@
 
         <property name="publishedAt" type="datetime" mandatory="true" colspan="6">
             <meta>
-                <title>sulu.news.publishedAt</title>
+                <title>sulu.havex.news.publishedAt</title>
             </meta>
         </property>
 
         <property name="route" type="route">
             <meta>
-                <title>sulu.news.route</title>
+                <title>sulu.havex.news.route</title>
             </meta>
         </property>
 
@@ -31,7 +31,7 @@
             <properties>
                 <property name="header" type="single_media_selection">
                     <meta>
-                        <title>sulu.news.image</title>
+                        <title>sulu.havex.news.image</title>
                     </meta>
                     <params>
                         <param name="types" value="image"/>
@@ -41,23 +41,23 @@
 
                 <property name="teaser" type="text_area">
                     <meta>
-                        <title>sulu.news.teaser</title>
+                        <title>sulu.havex.news.teaser</title>
                     </meta>
                 </property>
 
                 <block name="content" default-type="editor" minOccurs="0">
                     <meta>
-                        <title>sulu.news.content</title>
+                        <title>sulu.havex.news.content</title>
                     </meta>
                     <types>
                         <type name="title">
                             <meta>
-                                <title>sulu.news.title</title>
+                                <title>sulu.havex.news.title</title>
                             </meta>
                             <properties>
                                 <property name="title" type="text_line" colspan="12">
                                     <meta>
-                                        <title>sulu.news.title</title>
+                                        <title>sulu.havex.news.title</title>
                                     </meta>
                                 </property>
 
@@ -92,12 +92,12 @@
                         </type>
                         <type name="editor">
                             <meta>
-                                <title>sulu.news.editor</title>
+                                <title>sulu.havex.news.editor</title>
                             </meta>
                             <properties>
                                 <property name="text" type="text_editor" colspan="12">
                                     <meta>
-                                        <title>sulu.news.editor</title>
+                                        <title>sulu.havex.news.editor</title>
                                     </meta>
                                 </property>
                             </properties>
@@ -110,20 +110,20 @@
                             <properties>
                                 <property name="image" type="single_media_selection">
                                     <meta>
-                                        <title>sulu.news.image</title>
+                                        <title>sulu.havex.news.image</title>
                                     </meta>
                                 </property>
                             </properties>
                         </type>
                         <type name="quote">
                             <meta>
-                                <title>sulu.news.quote</title>
+                                <title>sulu.havex.news.quote</title>
                             </meta>
 
                             <properties>
                                 <property name="quote" type="text_area" mandatory="true">
                                     <meta>
-                                        <title>sulu.news.quote</title>
+                                        <title>sulu.havex.news.quote</title>
                                     </meta>
                                 </property>
 
@@ -147,7 +147,7 @@
             <properties>
                 <property name="tags" type="tag_selection">
                     <meta>
-                        <title>sulu.news.tags</title>
+                        <title>sulu.havex.news.tags</title>
                     </meta>
                 </property>
             </properties>

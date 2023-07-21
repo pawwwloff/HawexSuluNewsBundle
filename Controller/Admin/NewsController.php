@@ -11,7 +11,7 @@ declare(strict_types=1);
  * with this source code in the file LICENSE.
  */
 
-namespace TheCadien\Bundle\SuluNewsBundle\Controller\Admin;
+namespace Havex\Bundle\SuluNewsBundle\Controller\Admin;
 
 use Doctrine\ORM\OptimisticLockException;
 use Doctrine\ORM\ORMException;
@@ -26,11 +26,11 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
-use TheCadien\Bundle\SuluNewsBundle\Admin\DoctrineListRepresentationFactory;
-use TheCadien\Bundle\SuluNewsBundle\Api\News as NewsApi;
-use TheCadien\Bundle\SuluNewsBundle\Entity\News;
-use TheCadien\Bundle\SuluNewsBundle\Repository\NewsRepository;
-use TheCadien\Bundle\SuluNewsBundle\Service\News\NewsService;
+use Havex\Bundle\SuluNewsBundle\Admin\DoctrineListRepresentationFactory;
+use Havex\Bundle\SuluNewsBundle\Api\News as NewsApi;
+use Havex\Bundle\SuluNewsBundle\Entity\News;
+use Havex\Bundle\SuluNewsBundle\Repository\NewsRepository;
+use Havex\Bundle\SuluNewsBundle\Service\News\NewsService;
 
 class NewsController extends AbstractRestController implements ClassResourceInterface
 {

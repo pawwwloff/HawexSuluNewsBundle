@@ -11,9 +11,9 @@ declare(strict_types=1);
  * with this source code in the file LICENSE.
  */
 
-namespace TheCadien\Bundle\SuluNewsBundle\Service\News;
+namespace Havex\Bundle\SuluNewsBundle\Service\News;
 
-use TheCadien\Bundle\SuluNewsBundle\Entity\News;
+use Havex\Bundle\SuluNewsBundle\Entity\News;
 
 interface NewsServiceInterface
 {

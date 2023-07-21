@@ -1,5 +1,5 @@
 {
-  "name": "thecadien/sulu-news-bundle",
+  "name": "pawwwloff/sulu-news-bundle",
   "type": "sulu-bundle",
   "description": "Simple News Bundle for Sulu 2 CMS",
   "keywords": [
@@ -7,11 +7,11 @@
     "suluCms",
     "news"
   ],
-  "homepage": "https://github.com/TheCadien/SuluNewsBundle",
+  "homepage": "https://github.com/pawwwloff/HawexSuluNewsBundle",
   "license": "MIT",
   "authors": [
     {
-      "name": "Oliver Kossin"
+      "name": "Evgeny Pavlov"
     }
   ],
   "require": {
@@ -59,7 +59,7 @@
   },
   "autoload": {
     "psr-4": {
-      "TheCadien\\Bundle\\SuluNewsBundle\\": ""
+      "Havex\\Bundle\\SuluNewsBundle\\": ""
     }
   },
   "config": {

@@ -11,16 +11,16 @@ declare(strict_types=1);
  * with this source code in the file LICENSE.
  */
 
-namespace TheCadien\Bundle\SuluNewsBundle\Tests\Unit\Traits\Api;
+namespace Havex\Bundle\SuluNewsBundle\Tests\Unit\Traits\Api;
 
-use TheCadien\Bundle\SuluNewsBundle\Api\News as ApiNews;
+use Havex\Bundle\SuluNewsBundle\Api\News as ApiNews;
 
 /**
  * Trait NewsTrait.
  */
 trait NewsTrait
 {
-    use \TheCadien\Bundle\SuluNewsBundle\Tests\Unit\Traits\Entity\NewsTrait;
+    use \Havex\Bundle\SuluNewsBundle\Tests\Unit\Traits\Entity\NewsTrait;
 
     public function generateEmptyApiNews(): ApiNews
     {

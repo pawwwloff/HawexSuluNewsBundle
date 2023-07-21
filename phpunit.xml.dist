@@ -15,6 +15,6 @@
     </filter>
 
     <php>
-        <env name="KERNEL_CLASS" value="TheCadien\Bundle\SuluNewsBundle\Tests\Application\Kernel"/>
+        <env name="KERNEL_CLASS" value="Havex\Bundle\SuluNewsBundle\Tests\Application\Kernel"/>
     </php>
 </phpunit>

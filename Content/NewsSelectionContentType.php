@@ -11,18 +11,18 @@ declare(strict_types=1);
  * with this source code in the file LICENSE.
  */
 
-namespace TheCadien\Bundle\SuluNewsBundle\Content;
+namespace Havex\Bundle\SuluNewsBundle\Content;
 
 use Sulu\Component\Content\Compat\PropertyInterface;
 use Sulu\Component\Content\SimpleContentType;
-use TheCadien\Bundle\SuluNewsBundle\Entity\News;
-use TheCadien\Bundle\SuluNewsBundle\Repository\NewsRepository;
+use Havex\Bundle\SuluNewsBundle\Entity\News;
+use Havex\Bundle\SuluNewsBundle\Repository\NewsRepository;
 
 class NewsSelectionContentType extends SimpleContentType
 {
     public function __construct(private readonly NewsRepository $newsRepository)
     {
-        parent::__construct('news_selection', []);
+        parent::__construct('havex_news_selection', []);
     }
 
     /**

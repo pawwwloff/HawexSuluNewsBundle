@@ -11,14 +11,14 @@ declare(strict_types=1);
  * with this source code in the file LICENSE.
  */
 
-namespace TheCadien\Bundle\SuluNewsBundle\Api;
+namespace Havex\Bundle\SuluNewsBundle\Api;
 
 use JMS\Serializer\Annotation\ExclusionPolicy;
 use JMS\Serializer\Annotation\Groups;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\VirtualProperty;
 use Sulu\Component\Rest\ApiWrapper;
-use TheCadien\Bundle\SuluNewsBundle\Entity\News as NewsEntity;
+use Havex\Bundle\SuluNewsBundle\Entity\News as NewsEntity;
 
 /**
  * The News class which will be exported to the API.

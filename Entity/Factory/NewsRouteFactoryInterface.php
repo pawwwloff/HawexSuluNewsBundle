@@ -11,10 +11,10 @@ declare(strict_types=1);
  * with this source code in the file LICENSE.
  */
 
-namespace TheCadien\Bundle\SuluNewsBundle\Entity\Factory;
+namespace Havex\Bundle\SuluNewsBundle\Entity\Factory;
 
 use Sulu\Bundle\RouteBundle\Model\RouteInterface;
-use TheCadien\Bundle\SuluNewsBundle\Entity\News;
+use Havex\Bundle\SuluNewsBundle\Entity\News;
 
 interface NewsRouteFactoryInterface
 {

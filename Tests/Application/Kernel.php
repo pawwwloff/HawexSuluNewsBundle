@@ -11,12 +11,12 @@ declare(strict_types=1);
  * with this source code in the file LICENSE.
  */
 
-namespace TheCadien\Bundle\SuluNewsBundle\Tests\Application;
+namespace Havex\Bundle\SuluNewsBundle\Tests\Application;
 
 use Sulu\Bundle\TestBundle\Kernel\SuluTestKernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\HttpKernel\Bundle\BundleInterface;
-use TheCadien\Bundle\SuluNewsBundle\NewsBundle;
+use Havex\Bundle\SuluNewsBundle\HavexNewsBundle;
 
 class Kernel extends SuluTestKernel
 {
@@ -27,7 +27,7 @@ class Kernel extends SuluTestKernel
     {
         /** @var BundleInterface[] $bundles */
         $bundles = parent::registerBundles();
-        $bundles[] = new NewsBundle();
+        $bundles[] = new HavexNewsBundle();
 
         return $bundles;
     }

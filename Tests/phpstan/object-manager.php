@@ -12,7 +12,7 @@ declare(strict_types=1);
  */
 
 use Symfony\Component\DependencyInjection\ContainerInterface;
-use TheCadien\Bundle\SuluNewsBundle\Tests\Application\Kernel;
+use Havex\Bundle\SuluNewsBundle\Tests\Application\Kernel;
 
 require \dirname(__DIR__) . '/bootstrap.php';
 

@@ -11,11 +11,11 @@ declare(strict_types=1);
  * with this source code in the file LICENSE.
  */
 
-namespace TheCadien\Bundle\SuluNewsBundle\Repository;
+namespace Havex\Bundle\SuluNewsBundle\Repository;
 
 use Doctrine\ORM\EntityRepository;
 use Sulu\Component\SmartContent\Orm\DataProviderRepositoryInterface;
-use TheCadien\Bundle\SuluNewsBundle\Entity\News;
+use Havex\Bundle\SuluNewsBundle\Entity\News;
 
 /**
  * Class NewsRepository.
@@ -36,7 +36,7 @@ class NewsRepository extends EntityRepository implements DataProviderRepositoryI
     {
         $qb = $this->getEntityManager()->createQueryBuilder();
         $qb->select('n')
-            ->from('NewsBundle:News', 'n')
+            ->from('HavexNewsBundle:News', 'n')
             ->where('n.enabled = 1')
             ->andWhere('n.publishedAt <= :created')
             ->setParameter('created', \date('Y-m-d H:i:s'))

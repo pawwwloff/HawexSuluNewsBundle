@@ -14,11 +14,11 @@ composer require thecadien/sulu-news-bundle
 ### Enable the bundle 
  
  Enable the bundle by adding it to the list of registered bundles in the `config/bundles.php` file of your project:
- 
+
  ```php
  return [
      /* ... */
-     TheCadien\Bundle\SuluNewsBundle\NewsBundle::class => ['all' => true],
+     Havex\Bundle\SuluNewsBundle\HavexNewsBundle::class => ['all' => true],
  ];
  ```
 

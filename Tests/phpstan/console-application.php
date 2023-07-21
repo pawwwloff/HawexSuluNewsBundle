@@ -11,7 +11,7 @@ declare(strict_types=1);
  * with this source code in the file LICENSE.
  */
 use Symfony\Bundle\FrameworkBundle\Console\Application;
-use TheCadien\Bundle\SuluNewsBundle\Tests\Application\Kernel;
+use Havex\Bundle\SuluNewsBundle\Tests\Application\Kernel;
 
 require \dirname(__DIR__) . '/bootstrap.php';
 

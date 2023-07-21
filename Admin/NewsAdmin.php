@@ -11,7 +11,7 @@ declare(strict_types=1);
  * with this source code in the file LICENSE.
  */
 
-namespace TheCadien\Bundle\SuluNewsBundle\Admin;
+namespace Havex\Bundle\SuluNewsBundle\Admin;
 
 use Sulu\Bundle\ActivityBundle\Infrastructure\Sulu\Admin\View\ActivityViewBuilderFactoryInterface;
 use Sulu\Bundle\AdminBundle\Admin\Admin;
@@ -25,11 +25,11 @@ use Sulu\Bundle\AdminBundle\Admin\View\ViewCollection;
 use Sulu\Component\Security\Authorization\PermissionTypes;
 use Sulu\Component\Security\Authorization\SecurityCheckerInterface;
 use Sulu\Component\Webspace\Manager\WebspaceManagerInterface;
-use TheCadien\Bundle\SuluNewsBundle\Entity\News;
+use Havex\Bundle\SuluNewsBundle\Entity\News;
 
 class NewsAdmin extends Admin
 {
-    final public const SECURITY_CONTEXT = 'sulu.news';
+    final public const SECURITY_CONTEXT = 'sulu.havex.news';
 
     final public const NEWS_LIST_KEY = 'news';
 
@@ -56,9 +56,9 @@ class NewsAdmin extends Admin
     public function configureNavigationItems(NavigationItemCollection $navigationItemCollection): void
     {
         if ($this->securityChecker->hasPermission(static::SECURITY_CONTEXT, PermissionTypes::VIEW)) {
-            $module = new NavigationItem('sulu.news');
+            $module = new NavigationItem('sulu.havex.news');
             $module->setPosition(20);
-            $module->setIcon('su-newspaper');
+            $module->setIcon('su-pen');
             $module->setView(static::NEWS_LIST_VIEW);
 
             $navigationItemCollection->add($module);
@@ -74,7 +74,7 @@ class NewsAdmin extends Admin
         $listView = $this->viewBuilderFactory->createListViewBuilder(self::NEWS_LIST_VIEW, '/news/:locale')
             ->setResourceKey(News::RESOURCE_KEY)
             ->setListKey(self::NEWS_LIST_KEY)
-            ->setTitle('sulu.news')
+            ->setTitle('sulu.havex.news')
             ->addListAdapters(['table'])
             ->addLocales($locales)
             ->setDefaultLocale($locales[0])
@@ -110,7 +110,7 @@ class NewsAdmin extends Admin
             new ToolbarAction('sulu_admin.save'),
             new ToolbarAction('sulu_admin.delete'),
             new TogglerToolbarAction(
-                'sulu.news.enable_news',
+                'sulu.havex.news.enable_news',
                 'enabled',
                 'enable',
                 'disable'

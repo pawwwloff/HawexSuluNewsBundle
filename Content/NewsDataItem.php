@@ -11,11 +11,11 @@ declare(strict_types=1);
  * with this source code in the file LICENSE.
  */
 
-namespace TheCadien\Bundle\SuluNewsBundle\Content;
+namespace Havex\Bundle\SuluNewsBundle\Content;
 
 use JMS\Serializer\Annotation as Serializer;
 use Sulu\Component\SmartContent\ItemInterface;
-use TheCadien\Bundle\SuluNewsBundle\Entity\News;
+use Havex\Bundle\SuluNewsBundle\Entity\News;
 
 class NewsDataItem implements ItemInterface
 {

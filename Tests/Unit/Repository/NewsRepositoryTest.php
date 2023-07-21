@@ -11,15 +11,15 @@ declare(strict_types=1);
  * with this source code in the file LICENSE.
  */
 
-namespace TheCadien\Bundle\SuluNewsBundle\Tests\Unit\Repository;
+namespace Havex\Bundle\SuluNewsBundle\Tests\Unit\Repository;
 
 use DateTime;
 use Doctrine\ORM\EntityManager;
 use Sulu\Bundle\TestBundle\Testing\PurgeDatabaseTrait;
 use Sulu\Bundle\TestBundle\Testing\SuluTestCase;
-use TheCadien\Bundle\SuluNewsBundle\Entity\News;
-use TheCadien\Bundle\SuluNewsBundle\Repository\NewsRepository;
-use TheCadien\Bundle\SuluNewsBundle\Tests\Unit\Traits\Api\NewsTrait;
+use Havex\Bundle\SuluNewsBundle\Entity\News;
+use Havex\Bundle\SuluNewsBundle\Repository\NewsRepository;
+use Havex\Bundle\SuluNewsBundle\Tests\Unit\Traits\Api\NewsTrait;
 
 /**
  * @internal

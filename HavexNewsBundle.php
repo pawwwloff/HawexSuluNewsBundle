@@ -11,14 +11,14 @@ declare(strict_types=1);
  * with this source code in the file LICENSE.
  */
 
-namespace TheCadien\Bundle\SuluNewsBundle;
+namespace Havex\Bundle\SuluNewsBundle;
 
 use Sulu\Bundle\PersistenceBundle\PersistenceBundleTrait;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
-use TheCadien\Bundle\SuluNewsBundle\Entity\NewsInterface;
+use Havex\Bundle\SuluNewsBundle\Entity\NewsInterface;
 
-class NewsBundle extends Bundle
+class HavexNewsBundle extends Bundle
 {
     use PersistenceBundleTrait;
 
@@ -26,7 +26,7 @@ class NewsBundle extends Bundle
     {
         $this->buildPersistence(
             [
-                NewsInterface::class => 'sulu.model.news.class',
+                NewsInterface::class => 'sulu.model.havex.news.class',
             ],
             $container
         );

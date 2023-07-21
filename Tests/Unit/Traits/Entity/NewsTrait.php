@@ -11,11 +11,11 @@ declare(strict_types=1);
  * with this source code in the file LICENSE.
  */
 
-namespace TheCadien\Bundle\SuluNewsBundle\Tests\Unit\Traits\Entity;
+namespace Havex\Bundle\SuluNewsBundle\Tests\Unit\Traits\Entity;
 
 use DateTime;
 use Sulu\Bundle\RouteBundle\Entity\Route;
-use TheCadien\Bundle\SuluNewsBundle\Entity\News;
+use Havex\Bundle\SuluNewsBundle\Entity\News;
 
 /**
  * Trait NewsTrait.

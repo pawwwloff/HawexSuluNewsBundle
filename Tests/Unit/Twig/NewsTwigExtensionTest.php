@@ -1,11 +1,11 @@
 <?php
 
-namespace TheCadien\Bundle\SuluNewsBundle\Tests\Unit\Twig;
+namespace Havex\Bundle\SuluNewsBundle\Tests\Unit\Twig;
 
 use PHPUnit\Framework\TestCase;
-use TheCadien\Bundle\SuluNewsBundle\Repository\NewsRepository;
-use TheCadien\Bundle\SuluNewsBundle\Tests\Unit\Traits\Entity\NewsTrait;
-use TheCadien\Bundle\SuluNewsBundle\Twig\NewsTwigExtension;
+use Havex\Bundle\SuluNewsBundle\Repository\NewsRepository;
+use Havex\Bundle\SuluNewsBundle\Tests\Unit\Traits\Entity\NewsTrait;
+use Havex\Bundle\SuluNewsBundle\Twig\NewsTwigExtension;
 
 class NewsTwigExtensionTest extends TestCase
 {

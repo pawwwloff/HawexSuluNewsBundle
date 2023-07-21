@@ -2,8 +2,8 @@
 <doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                   xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
-    <mapped-superclass name="TheCadien\Bundle\SuluNewsBundle\Entity\News" table="su_news"
-                       repository-class="TheCadien\Bundle\SuluNewsBundle\Repository\NewsRepository">
+    <mapped-superclass name="Havex\Bundle\SuluNewsBundle\Entity\News" table="su_havex_news"
+                       repository-class="Havex\Bundle\SuluNewsBundle\Repository\NewsRepository">
 
         <id name="id" type="integer" column="id">
             <generator strategy="AUTO"/>

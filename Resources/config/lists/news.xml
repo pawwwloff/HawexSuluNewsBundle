@@ -5,14 +5,14 @@
     <joins name="changer">
         <join>
             <entity-name>%sulu.model.user.class%</entity-name>
-            <field-name>%sulu.model.news.class%.changer</field-name>
+            <field-name>%sulu.model.havex.news.class%.changer</field-name>
         </join>
     </joins>
 
     <joins name="creator">
         <join>
             <entity-name>%sulu.model.contact.class%</entity-name>
-            <field-name>%sulu.model.news.class%.creator</field-name>
+            <field-name>%sulu.model.havex.news.class%.creator</field-name>
         </join>
     </joins>
 
@@ -21,7 +21,7 @@
         <property
                 name="header"
                 visibility="always"
-                translation="sulu.news.header"
+                translation="sulu.havex.news.header"
                 type="thumbnails"
                 sortable="false"
         >
@@ -31,29 +31,29 @@
             <joins>
                 <join>
                     <entity-name>SuluMediaBundle:Media</entity-name>
-                    <field-name>%sulu.model.news.class%.header</field-name>
+                    <field-name>%sulu.model.havex.news.class%.header</field-name>
                 </join>
             </joins>
         </property>
 
         <property name="id" visibility="no" translation="sulu_admin.id">
             <field-name>id</field-name>
-            <entity-name>TheCadien\Bundle\SuluNewsBundle\Entity\News</entity-name>
+            <entity-name>Havex\Bundle\SuluNewsBundle\Entity\News</entity-name>
         </property>
 
         <property name="title" visibility="always" searchability="yes" translation="sulu_admin.title">
             <field-name>title</field-name>
-            <entity-name>TheCadien\Bundle\SuluNewsBundle\Entity\News</entity-name>
+            <entity-name>Havex\Bundle\SuluNewsBundle\Entity\News</entity-name>
         </property>
 
-        <property name="teaser" visibility="always" searchability="yes" translation="sulu.news.teaser">
+        <property name="teaser" visibility="always" searchability="yes" translation="sulu.havex.news.teaser">
             <field-name>teaser</field-name>
-            <entity-name>TheCadien\Bundle\SuluNewsBundle\Entity\News</entity-name>
+            <entity-name>Havex\Bundle\SuluNewsBundle\Entity\News</entity-name>
         </property>
 
-        <property name="publishedAt" type="datetime" visibility="yes" searchability="yes" translation="sulu.news.publishedAt">
+        <property name="publishedAt" type="datetime" visibility="yes" searchability="yes" translation="sulu.havex.news.publishedAt">
             <field-name>publishedAt</field-name>
-            <entity-name>TheCadien\Bundle\SuluNewsBundle\Entity\News</entity-name>
+            <entity-name>Havex\Bundle\SuluNewsBundle\Entity\News</entity-name>
 
             <filter type="datetime" />
         </property>
@@ -88,7 +88,7 @@
                 type="datetime"
         >
             <field-name>created</field-name>
-            <entity-name>%sulu.model.news.class%</entity-name>
+            <entity-name>%sulu.model.havex.news.class%</entity-name>
 
             <filter type="datetime" />
         </property>
@@ -122,15 +122,15 @@
                 translation="sulu_admin.changed"
         >
             <field-name>changed</field-name>
-            <entity-name>%sulu.model.news.class%</entity-name>
+            <entity-name>%sulu.model.havex.news.class%</entity-name>
 
             <filter type="datetime" />
         </property>
 
 
-        <property name="enabled" visibility="no" translation="sulu.news.enable_news" type="bool">
+        <property name="enabled" visibility="no" translation="sulu.havex.news.enable_news" type="bool">
             <field-name>enabled</field-name>
-            <entity-name>TheCadien\Bundle\SuluNewsBundle\Entity\News</entity-name>
+            <entity-name>Havex\Bundle\SuluNewsBundle\Entity\News</entity-name>
         </property>
     </properties>
 </list>

@@ -11,20 +11,20 @@ declare(strict_types=1);
  * with this source code in the file LICENSE.
  */
 
-namespace TheCadien\Bundle\SuluNewsBundle\Service\News;
+namespace Havex\Bundle\SuluNewsBundle\Service\News;
 
 use Doctrine\ORM\OptimisticLockException;
 use Doctrine\ORM\ORMException;
 use Sulu\Bundle\ActivityBundle\Application\Collector\DomainEventCollectorInterface;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
-use TheCadien\Bundle\SuluNewsBundle\Entity\Factory\NewsFactory;
-use TheCadien\Bundle\SuluNewsBundle\Entity\Factory\NewsRouteFactory;
-use TheCadien\Bundle\SuluNewsBundle\Entity\News;
-use TheCadien\Bundle\SuluNewsBundle\Event\NewsCreatedActivityEvent;
-use TheCadien\Bundle\SuluNewsBundle\Event\NewsModifiedActivityEvent;
-use TheCadien\Bundle\SuluNewsBundle\Event\NewsRemovedActivityEvent;
-use TheCadien\Bundle\SuluNewsBundle\Repository\NewsRepository;
+use Havex\Bundle\SuluNewsBundle\Entity\Factory\NewsFactory;
+use Havex\Bundle\SuluNewsBundle\Entity\Factory\NewsRouteFactory;
+use Havex\Bundle\SuluNewsBundle\Entity\News;
+use Havex\Bundle\SuluNewsBundle\Event\NewsCreatedActivityEvent;
+use Havex\Bundle\SuluNewsBundle\Event\NewsModifiedActivityEvent;
+use Havex\Bundle\SuluNewsBundle\Event\NewsRemovedActivityEvent;
+use Havex\Bundle\SuluNewsBundle\Repository\NewsRepository;
 
 class NewsService implements NewsServiceInterface
 {

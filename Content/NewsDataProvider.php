@@ -11,7 +11,7 @@ declare(strict_types=1);
  * with this source code in the file LICENSE.
  */
 
-namespace TheCadien\Bundle\SuluNewsBundle\Content;
+namespace Havex\Bundle\SuluNewsBundle\Content;
 
 use JMS\Serializer\Context;
 use JMS\Serializer\SerializationContext;
