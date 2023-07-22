@@ -17,9 +17,9 @@ use Sulu\Bundle\RouteBundle\Routing\Defaults\RouteDefaultsProviderInterface;
 use Havex\Bundle\SuluNewsBundle\Entity\HavexNews;
 use Havex\Bundle\SuluNewsBundle\Repository\HavexNewsRepository;
 
-class NewsRouteDefaultProvider implements RouteDefaultsProviderInterface
+class HavexNewsRouteDefaultProvider implements RouteDefaultsProviderInterface
 {
-    public function __construct(private readonly NewsRepository $newsRepository)
+    public function __construct(private readonly HavexNewsRepository $newsRepository)
     {
     }
 

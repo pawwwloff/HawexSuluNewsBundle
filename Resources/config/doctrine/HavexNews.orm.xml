@@ -38,7 +38,7 @@
         <field name="seo" type="json" column="seo" nullable="true"/>
 
         <many-to-many field="tags" target-entity="Sulu\Bundle\TagBundle\Tag\TagInterface">
-            <join-table name="news_tags">
+            <join-table name="havex_news_tags">
                 <join-columns>
                     <join-column name="news_id" referenced-column-name="id"/>
                 </join-columns>

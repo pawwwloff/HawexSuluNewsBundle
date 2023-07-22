@@ -20,9 +20,9 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Havex\Bundle\SuluNewsBundle\Entity\HavexNews;
 
 /**
- * Class NewsWebsiteController.
+ * Class HavexNewsWebsiteController.
  */
-class NewsWebsiteController extends AbstractController
+class HavexNewsWebsiteController extends AbstractController
 {
     public function indexAction(HavexNews $news, $attributes = [], $preview = false, $partial = false): Response
     {

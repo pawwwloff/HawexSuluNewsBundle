@@ -4,7 +4,7 @@
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
 
-        <service id="sulu_havex_news.admin" class="Havex\Bundle\SuluNewsBundle\Admin\NewsAdmin">
+        <service id="sulu_havex_news.admin" class="Havex\Bundle\SuluNewsBundle\Admin\HavexNewsAdmin">
             <argument type="service" id="sulu_admin.view_builder_factory"/>
             <argument type="service" id="sulu_core.webspace.webspace_manager"/>
             <argument type="service" id="sulu_security.security_checker"/>
@@ -60,7 +60,7 @@
 
         <service id="sulu_havex_news.smart.content" public="true"
                  class="Havex\Bundle\SuluNewsBundle\Content\NewsDataProvider">
-            <tag name="sulu.smart_content.data_provider" alias="news"/>
+            <tag name="sulu.smart_content.data_provider" alias="havex_news"/>
             <argument type="service" id="sulu_havex_news.repository"/>
             <argument type="service" id="sulu_core.array_serializer"/>
         </service>
@@ -75,16 +75,16 @@
             <tag name="sulu.context" context="admin"/>
         </service>
 
-        <service id="sulu_havex_news.object_provider" public="true" class="Havex\Bundle\SuluNewsBundle\Preview\NewsObjectProvider">
+        <service id="sulu_havex_news.object_provider" public="true" class="Havex\Bundle\SuluNewsBundle\Preview\HavexNewsObjectProvider">
             <argument type="service" id="sulu_havex_news.repository"/>
-            <tag name="sulu_preview.object_provider" provider-key="news"/>
+            <tag name="sulu_preview.object_provider" provider-key="havex_news"/>
         </service>
 
         <service id="sulu_havex_news.route.factory" public="true" class="Havex\Bundle\SuluNewsBundle\Entity\Factory\NewsRouteFactory">
             <argument type="service" id="sulu_route.manager.route_manager"/>
         </service>
 
-        <service id="sulu_havex_news.routing_provider" public="true" class="Havex\Bundle\SuluNewsBundle\Routing\NewsRouteDefaultProvider">
+        <service id="sulu_havex_news.routing_provider" public="true" class="Havex\Bundle\SuluNewsBundle\Routing\HavexNewsRouteDefaultProvider">
             <argument type="service" id="sulu_havex_news.repository"/>
             <tag name="sulu_route.defaults_provider"/>
         </service>

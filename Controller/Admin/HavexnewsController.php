@@ -27,26 +27,26 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 use Havex\Bundle\SuluNewsBundle\Admin\DoctrineListRepresentationFactory;
-use Havex\Bundle\SuluNewsBundle\Api\News as NewsApi;
+use Havex\Bundle\SuluNewsBundle\Api\HavexNews as NewsApi;
 use Havex\Bundle\SuluNewsBundle\Entity\HavexNews;
 use Havex\Bundle\SuluNewsBundle\Repository\HavexNewsRepository;
 use Havex\Bundle\SuluNewsBundle\Service\News\NewsService;
 
-class NewsController extends AbstractRestController implements ClassResourceInterface
+class HavexnewsController extends AbstractRestController implements ClassResourceInterface
 {
     // serialization groups for contact
     protected static $oneNewsSerializationGroups = [
         'partialMedia',
-        'fullNews',
+        'fullHavexNews',
     ];
 
     /**
-     * NewsController constructor.
+     * HavexnewsController constructor.
      */
     public function __construct(
         ViewHandlerInterface $viewHandler,
         TokenStorageInterface $tokenStorage,
-        private readonly NewsRepository $repository,
+        private readonly HavexNewsRepository $repository,
         private readonly NewsService $newsService,
         private readonly DoctrineListRepresentationFactory $doctrineListRepresentationFactory,
     ) {
@@ -94,7 +94,7 @@ class NewsController extends AbstractRestController implements ClassResourceInte
     }
 
     /**
-     * @Rest\Post("/news/{id}")
+     * @Rest\Post("/havexnews/{id}")
      */
     public function postTriggerAction(int $id, Request $request): Response
     {

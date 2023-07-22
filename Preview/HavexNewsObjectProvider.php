@@ -14,13 +14,13 @@ declare(strict_types=1);
 namespace Havex\Bundle\SuluNewsBundle\Preview;
 
 use Sulu\Bundle\PreviewBundle\Preview\Object\PreviewObjectProviderInterface;
-use Havex\Bundle\SuluNewsBundle\Admin\NewsAdmin;
+use Havex\Bundle\SuluNewsBundle\Admin\HavexNewsAdmin;
 use Havex\Bundle\SuluNewsBundle\Entity\HavexNews;
 use Havex\Bundle\SuluNewsBundle\Repository\HavexNewsRepository;
 
-class NewsObjectProvider implements PreviewObjectProviderInterface
+class HavexNewsObjectProvider implements PreviewObjectProviderInterface
 {
-    public function __construct(private readonly NewsRepository $newsRepository)
+    public function __construct(private readonly HavexNewsRepository $newsRepository)
     {
     }
 
@@ -60,6 +60,6 @@ class NewsObjectProvider implements PreviewObjectProviderInterface
 
     public function getSecurityContext($id, $locale): ?string
     {
-        return NewsAdmin::SECURITY_CONTEXT;
+        return HavexNewsAdmin::SECURITY_CONTEXT;
     }
 }

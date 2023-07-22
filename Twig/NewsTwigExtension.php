@@ -24,7 +24,7 @@ use Twig\TwigFunction;
 class NewsTwigExtension extends AbstractExtension
 {
     public function __construct(
-        private readonly NewsRepository $newsRepository
+        private readonly HavexNewsRepository $newsRepository
     ) {
     }
 

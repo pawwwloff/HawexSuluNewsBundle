@@ -27,23 +27,23 @@ use Sulu\Component\Security\Authorization\SecurityCheckerInterface;
 use Sulu\Component\Webspace\Manager\WebspaceManagerInterface;
 use Havex\Bundle\SuluNewsBundle\Entity\HavexNews;
 
-class NewsAdmin extends Admin
+class HavexNewsAdmin extends Admin
 {
     final public const SECURITY_CONTEXT = 'sulu.havex.news';
 
-    final public const NEWS_LIST_KEY = 'news';
+    final public const NEWS_LIST_KEY = 'havex_news';
 
-    final public const NEWS_FORM_KEY_ADD = 'news_details_add';
+    final public const NEWS_FORM_KEY_ADD = 'havex_news_details_add';
 
-    final public const NEWS_FORM_KEY_EDIT = 'news_details_edit';
+    final public const NEWS_FORM_KEY_EDIT = 'havex_news_details_edit';
 
-    final public const NEWS_LIST_VIEW = 'app.news_list';
+    final public const NEWS_LIST_VIEW = 'app.havex_news_list';
 
-    final public const NEWS_ADD_FORM_VIEW = 'app.news_add_form';
+    final public const NEWS_ADD_FORM_VIEW = 'app.havex_news_add_form';
 
-    final public const NEWS_EDIT_FORM_VIEW = 'app.news_edit_form';
+    final public const NEWS_EDIT_FORM_VIEW = 'app.havex_news_edit_form';
 
-    final public const NEWS_FORM_KEY_SETTINGS = 'news_settings';
+    final public const NEWS_FORM_KEY_SETTINGS = 'havex_news_settings';
 
     public function __construct(
         private readonly ViewBuilderFactoryInterface $viewBuilderFactory,
@@ -71,7 +71,7 @@ class NewsAdmin extends Admin
 
         // Configure news List View
         $listToolbarActions = [new ToolbarAction('sulu_admin.add'), new ToolbarAction('sulu_admin.delete')];
-        $listView = $this->viewBuilderFactory->createListViewBuilder(self::NEWS_LIST_VIEW, '/news/:locale')
+        $listView = $this->viewBuilderFactory->createListViewBuilder(self::NEWS_LIST_VIEW, '/havex_news/:locale')
             ->setResourceKey(HavexNews::RESOURCE_KEY)
             ->setListKey(self::NEWS_LIST_KEY)
             ->setTitle('sulu.havex.news')
@@ -83,7 +83,7 @@ class NewsAdmin extends Admin
             ->addToolbarActions($listToolbarActions);
         $viewCollection->add($listView);
 
-        $addFormView = $this->viewBuilderFactory->createResourceTabViewBuilder(self::NEWS_ADD_FORM_VIEW, '/news/:locale/add')
+        $addFormView = $this->viewBuilderFactory->createResourceTabViewBuilder(self::NEWS_ADD_FORM_VIEW, '/havex_news/:locale/add')
             ->setResourceKey(HavexNews::RESOURCE_KEY)
             ->setBackView(static::NEWS_LIST_VIEW)
             ->addLocales($locales);
@@ -99,7 +99,7 @@ class NewsAdmin extends Admin
         $viewCollection->add($addDetailsFormView);
 
         // Configure news Edit View
-        $editFormView = $this->viewBuilderFactory->createResourceTabViewBuilder(static::NEWS_EDIT_FORM_VIEW, '/news/:locale/:id')
+        $editFormView = $this->viewBuilderFactory->createResourceTabViewBuilder(static::NEWS_EDIT_FORM_VIEW, '/havex_news/:locale/:id')
             ->setResourceKey(HavexNews::RESOURCE_KEY)
             ->setBackView(static::NEWS_LIST_VIEW)
             ->setTitleProperty('title')
