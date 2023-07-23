@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <list xmlns="http://schemas.sulu.io/list-builder/list">
-    <key>news</key>
+    <key>havex_news</key>
 
     <joins name="changer">
         <join>

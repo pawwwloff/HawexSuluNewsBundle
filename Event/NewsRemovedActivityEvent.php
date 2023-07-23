@@ -14,7 +14,7 @@ declare(strict_types=1);
 namespace Havex\Bundle\SuluNewsBundle\Event;
 
 use Sulu\Bundle\ActivityBundle\Domain\Event\DomainEvent;
-use Havex\Bundle\SuluNewsBundle\Admin\NewsAdmin;
+use Havex\Bundle\SuluNewsBundle\Admin\HavexNewsAdmin;
 use Havex\Bundle\SuluNewsBundle\Entity\HavexNews;
 
 class NewsRemovedActivityEvent extends DomainEvent
@@ -53,6 +53,6 @@ class NewsRemovedActivityEvent extends DomainEvent
 
     public function getResourceSecurityContext(): ?string
     {
-        return NewsAdmin::SECURITY_CONTEXT;
+        return HavexNewsAdmin::SECURITY_CONTEXT;
     }
 }

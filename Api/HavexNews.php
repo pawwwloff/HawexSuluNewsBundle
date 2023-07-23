@@ -25,7 +25,7 @@ use Havex\Bundle\SuluNewsBundle\Entity\HavexNews as NewsEntity;
  *
  * @ExclusionPolicy("all")
  */
-class News extends ApiWrapper
+class HavexNews extends ApiWrapper
 {
     public function __construct(NewsEntity $contact, $locale)
     {
@@ -40,7 +40,7 @@ class News extends ApiWrapper
      * @VirtualProperty
      *
      * @SerializedName("id")
-     * @Groups({"fullNews"})
+     * @Groups({"fullHavexNews"})
      */
     public function getId(): ?int
     {
@@ -51,7 +51,7 @@ class News extends ApiWrapper
      * @VirtualProperty
      *
      * @SerializedName("title")
-     * @Groups({"fullNews"})
+     * @Groups({"fullHavexNews"})
      */
     public function getTitle(): ?string
     {
@@ -62,7 +62,7 @@ class News extends ApiWrapper
      * @VirtualProperty
      *
      * @SerializedName("teaser")
-     * @Groups({"fullNews"})
+     * @Groups({"fullHavexNews"})
      */
     public function getTeaser(): ?string
     {
@@ -73,7 +73,7 @@ class News extends ApiWrapper
      * @VirtualProperty
      *
      * @SerializedName("content")
-     * @Groups({"fullNews"})
+     * @Groups({"fullHavexNews"})
      */
     public function getContent(): array
     {
@@ -88,7 +88,7 @@ class News extends ApiWrapper
      * @VirtualProperty
      *
      * @SerializedName("enabled")
-     * @Groups({"fullNews"})
+     * @Groups({"fullHavexNews"})
      */
     public function isEnabled(): bool
     {
@@ -99,7 +99,7 @@ class News extends ApiWrapper
      * @VirtualProperty
      *
      * @SerializedName("publishedAt")
-     * @Groups({"fullNews"})
+     * @Groups({"fullHavexNews"})
      */
     public function getPublishedAt(): ?\DateTime
     {
@@ -110,7 +110,7 @@ class News extends ApiWrapper
      * @VirtualProperty
      *
      * @SerializedName("route")
-     * @Groups({"fullNews"})
+     * @Groups({"fullHavexNews"})
      */
     public function getRoutePath(): ?string
     {
@@ -127,7 +127,7 @@ class News extends ApiWrapper
      * @VirtualProperty
      *
      * @SerializedName("tags")
-     * @Groups({"fullNews"})
+     * @Groups({"fullHavexNews"})
      */
     public function getTags(): array
     {
@@ -140,7 +140,7 @@ class News extends ApiWrapper
      * @VirtualProperty
      *
      * @SerializedName("header")
-     * @Groups({"fullNews"})
+     * @Groups({"fullHavexNews"})
      */
     public function getHeader(): array
     {
@@ -159,7 +159,7 @@ class News extends ApiWrapper
      * @VirtualProperty
      *
      * @SerializedName("authored")
-     * @Groups({"fullNews"})
+     * @Groups({"fullHavexNews"})
      */
     public function getAuthored(): \DateTime
     {
@@ -172,7 +172,7 @@ class News extends ApiWrapper
      * @VirtualProperty
      *
      * @SerializedName("created")
-     * @Groups({"fullNews"})
+     * @Groups({"fullHavexNews"})
      */
     public function getCreated(): \DateTime
     {
@@ -185,7 +185,7 @@ class News extends ApiWrapper
      * @VirtualProperty
      *
      * @SerializedName("changed")
-     * @Groups({"fullNews"})
+     * @Groups({"fullHavexNews"})
      */
     public function getChanged(): \DateTime
     {
@@ -198,7 +198,7 @@ class News extends ApiWrapper
      * @VirtualProperty
      *
      * @SerializedName("author")
-     * @Groups({"fullNews"})
+     * @Groups({"fullHavexNews"})
      */
     public function getAuthor(): ?int
     {
@@ -211,7 +211,7 @@ class News extends ApiWrapper
      * @VirtualProperty
      *
      * @SerializedName("ext")
-     * @Groups({"fullNews"})
+     * @Groups({"fullHavexNews"})
      */
     public function getSeo(): array
     {

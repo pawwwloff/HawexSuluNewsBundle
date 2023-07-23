@@ -12,11 +12,11 @@ The smart content can be configured in every `template.xml` file.
  ```xml
         <property name="news" type="smart_content">
             <meta>
-                <title lang="en">Latest News</title>
+                <title lang="en">Hawex News</title>
             </meta>
 
             <params>
-                <param name="provider" value="news"/>
+                <param name="provider" value="havex_news"/>
                 <param name="max_per_page" value="5"/>
                 <param name="page_parameter" value="p"/>
             </params>
@@ -41,7 +41,7 @@ The smart content can be configured in every `template.xml` file.
 
 #### Twig Template
 
-If the bundles default controller is used, a template must be created in `news/index.html.twig`.
+If the bundles default controller is used, a template must be created in `hawex/news/index.html.twig`.
 
 This is an example template, covering all currently available content block types in one news item.
 

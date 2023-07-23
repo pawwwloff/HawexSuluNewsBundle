@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Havex\Bundle\SuluNewsBundle\Tests\Unit\Traits\Api;
 
-use Havex\Bundle\SuluNewsBundle\Api\News as ApiNews;
+use Havex\Bundle\SuluNewsBundle\Api\HavexNews as ApiNews;
 
 /**
  * Trait NewsTrait.

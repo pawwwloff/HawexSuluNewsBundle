@@ -37,7 +37,7 @@ class NewsService implements NewsServiceInterface
      * ArticleService constructor.
      */
     public function __construct(
-        private readonly NewsRepository $newsRepository,
+        private readonly HavexNewsRepository $newsRepository,
         private readonly NewsFactory $newsFactory,
         private readonly NewsRouteFactory $routeFactory,
         TokenStorageInterface $tokenStorage,

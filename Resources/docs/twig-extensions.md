@@ -5,7 +5,7 @@
 Returns news for given id.
 
  ```php
-{% set news = sulu_resolve_news('1') %}
+{% set news = sulu_resolve_hawex_news('1') %}
 {{ news.title }}
  ```
 

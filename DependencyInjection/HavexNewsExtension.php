@@ -19,7 +19,7 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\PrependExtensionInterface;
 use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
-use Havex\Bundle\SuluNewsBundle\Admin\NewsAdmin;
+use Havex\Bundle\SuluNewsBundle\Admin\HavexNewsAdmin;
 use Havex\Bundle\SuluNewsBundle\Entity\HavexNews;
 
 /**
@@ -27,7 +27,7 @@ use Havex\Bundle\SuluNewsBundle\Entity\HavexNews;
  *
  * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html}
  */
-class NewsExtension extends Extension implements PrependExtensionInterface
+class HavexNewsExtension extends Extension implements PrependExtensionInterface
 {
     use PersistenceExtensionTrait;
 
@@ -41,17 +41,17 @@ class NewsExtension extends Extension implements PrependExtensionInterface
                 'sulu_search',
                 [
                     'indexes' => [
-                        'news' => [
+                        'havex_news' => [
                             'name' => 'HavexNews',
                             'icon' => 'su-pen',
                             'view' => [
-                                'name' => NewsAdmin::NEWS_EDIT_FORM_VIEW,
+                                'name' => HavexNewsAdmin::NEWS_EDIT_FORM_VIEW,
                                 'result_to_view' => [
                                     'id' => 'id',
                                     'locale' => 'locale',
                                 ],
                             ],
-                            'security_context' => NewsAdmin::SECURITY_CONTEXT,
+                            'security_context' => HavexNewsAdmin::SECURITY_CONTEXT,
                         ],
                     ],
                 ]
@@ -65,7 +65,7 @@ class NewsExtension extends Extension implements PrependExtensionInterface
                     'mappings' => [
                         HavexNews::class => [
                             'generator' => 'schema',
-                            'options' => ['route_schema' => '/news/{object.getId()}'],
+                            'options' => ['route_schema' => '/havex_news/{object.getId()}'],
                             'resource_key' => HavexNews::RESOURCE_KEY,
                         ],
                     ],
@@ -88,10 +88,10 @@ class NewsExtension extends Extension implements PrependExtensionInterface
                         ],
                     ],
                     'resources' => [
-                        'news' => [
+                        'havex_news' => [
                             'routes' => [
-                                'list' => 'app.get_news',
-                                'detail' => 'app.get_news',
+                                'list' => 'app.get_havexnews',
+                                'detail' => 'app.get_havexnews',
                             ],
                         ],
                     ],

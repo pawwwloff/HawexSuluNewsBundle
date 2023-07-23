@@ -24,14 +24,14 @@ use Twig\TwigFunction;
 class NewsTwigExtension extends AbstractExtension
 {
     public function __construct(
-        private readonly NewsRepository $newsRepository
+        private readonly HavexNewsRepository $newsRepository
     ) {
     }
 
     public function getFunctions()
     {
         return [
-            new TwigFunction('sulu_resolve_news', [$this, 'resolveNewsFunction']),
+            new TwigFunction('sulu_resolve_hawex_news', [$this, 'resolveNewsFunction']),
         ];
     }
 
