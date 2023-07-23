@@ -78,6 +78,20 @@ class HavexNewsRepository extends EntityRepository implements DataProviderReposi
 
     public function findByFilters($filters, $page, $pageSize, $limit, $locale, $options = [])
     {
-        return $this->getPublishedNews();
+        $qb = $this->getEntityManager()->createQueryBuilder();
+        $qb->select('n')
+            ->from('HavexNewsBundle:HavexNews', 'n')
+            ->where('n.enabled = 1')
+            ->andWhere('n.publishedAt <= :created')
+            ->setParameter('created', \date('Y-m-d H:i:s'))
+            ->orderBy('n.publishedAt', 'DESC');
+
+        $news = $qb->getQuery()->getResult();
+
+        if (!$news) {
+            return [];
+        }
+
+        return $news;
     }
 }

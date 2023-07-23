@@ -32,18 +32,18 @@ class HavexNewsWebsiteController extends AbstractController
 
         if ($partial) {
             $content = $this->renderBlock(
-                'news/index.html.twig',
+                'hawex/news/index.html.twig',
                 'content',
                 ['news' => $news]
             );
         } elseif ($preview) {
             $content = $this->renderPreview(
-                'news/index.html.twig',
+                'hawex/news/index.html.twig',
                 ['news' => $news]
             );
         } else {
             $content = $this->renderView(
-                'news/index.html.twig',
+                'hawex/news/index.html.twig',
                 ['news' => $news]
             );
         }

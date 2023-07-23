@@ -31,7 +31,7 @@ class NewsTwigExtension extends AbstractExtension
     public function getFunctions()
     {
         return [
-            new TwigFunction('sulu_resolve_news', [$this, 'resolveNewsFunction']),
+            new TwigFunction('sulu_resolve_hawex_news', [$this, 'resolveNewsFunction']),
         ];
     }
 
